@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1830">
+  <meta name="description" content="Bajrang Internet Services, Palera — truly unlimited fiber broadband, IPTV, satellite TV and business connectivity.">
+  <title>Bajrang Internet Services | Palera</title>
+  <style>
+    :root{--navy:#0b1830;--navy2:#12294d;--blue:#2478ef;--orange:#ff8a24;--ink:#17243a;--muted:#64748b;--paper:#f5f8fc;--line:#e4eaf2}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}
+    header{background:rgba(11,24,48,.97);color:#fff;position:sticky;top:0;z-index:5;border-bottom:1px solid #263b5c}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}
+    .mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--orange),#ffd08c 48%,#49a4ff 49%,var(--blue));display:grid;place-items:center;color:#07152c;font-weight:900}
+    .brand small{display:block;font-size:10px;letter-spacing:1.5px;color:#c5d4ea;font-weight:600}.navlinks{display:flex;gap:22px;font-size:14px;color:#e4edfb}.navlinks a:hover{color:#ffb46e}
+    .hero{background:radial-gradient(circle at 82% 20%,#214c82 0,transparent 35%),linear-gradient(125deg,var(--navy),#102d55 72%,#163c69);color:#fff;padding:82px 0 76px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:35px}.eyebrow{color:#ffb36b;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800}
+    h1{font-size:clamp(38px,6vw,64px);line-height:1.05;margin:15px 0 18px;letter-spacing:-1.5px}.hero p{font-size:18px;color:#d7e5f7;max-width:620px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;font-weight:800;font-size:14px}.primary{background:var(--orange);color:#1b2433}.secondary{border:1px solid #7891b2;color:#fff}
+    .hero-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);padding:25px;border-radius:22px;backdrop-filter:blur(8px)}
+    .speed{font-size:52px;font-weight:900;line-height:1;color:#fff}.speed span{font-size:18px;color:#ffb36b}.hero-card p{font-size:14px;margin-bottom:0}
+    section{padding:68px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 35px}.section-head h2{font-size:clamp(28px,4vw,38px);margin:0 0 8px;color:var(--navy)}.section-head p{color:var(--muted);margin:0}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature,.plan,.service{border:1px solid var(--line);border-radius:18px;padding:23px;background:#fff;box-shadow:0 8px 25px rgba(19,43,77,.045)}
+    .feature .ico{width:42px;height:42px;border-radius:13px;background:#eaf2ff;color:var(--blue);display:grid;place-items:center;font-size:21px;margin-bottom:13px}.feature h3,.service h3{margin:0 0 5px}.feature p,.service p{margin:0;color:var(--muted);font-size:14px}
+    #plans{background:var(--paper)}.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.plan{position:relative;padding:25px}.plan.best{border:2px solid var(--blue);box-shadow:0 14px 35px rgba(36,120,239,.12)}.tag{display:inline-block;background:#eaf2ff;color:#1761c7;font-weight:800;font-size:11px;padding:5px 9px;border-radius:30px;text-transform:uppercase;letter-spacing:.6px}
+    .plan h3{font-size:19px;margin:14px 0 2px}.price{font-size:38px;font-weight:900;color:var(--navy);letter-spacing:-1px}.price small{font-size:13px;color:var(--muted);font-weight:600;letter-spacing:0}.plan ul{padding-left:19px;color:#526178;font-size:14px;min-height:92px}.plan li{margin:7px 0}
+    .plan .btn{width:100%;background:var(--navy);color:white;margin-top:8px}.plan.best .btn{background:var(--blue)}
+    .addon{margin:22px auto 0;max-width:800px;background:#fff;border:1px dashed #a9bdd7;padding:18px 22px;border-radius:15px;text-align:center;color:#43536b}.addon strong{color:var(--navy)}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.service{padding:20px}.service .ico{font-size:25px;margin-bottom:10px}
+    .why{background:var(--navy);color:#fff}.why .section-head h2{color:#fff}.why .section-head p{color:#c3d1e4}.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.why-item{padding:18px;border:1px solid #31496b;border-radius:15px;background:#122744}.why-item b{display:block;color:#ffb36b;margin-bottom:5px}.why-item span{font-size:13px;color:#d0dced}
+    .contact{background:linear-gradient(135deg,#eef5ff,#fff7ef)}.contact-box{background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px;display:flex;justify-content:space-between;align-items:center;gap:25px;box-shadow:0 12px 35px rgba(19,43,77,.06)}.contact-box h2{margin:0 0 6px;color:var(--navy);font-size:30px}.contact-box p{margin:0;color:var(--muted)}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}.call{background:var(--navy);color:#fff}.wa{background:#16a765;color:#fff}
+    footer{background:#071326;color:#c5d2e3;padding:27px 0;font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .note{font-size:12px;color:var(--muted);text-align:center;margin-top:20px}
+    @media(max-width:800px){.navlinks{display:none}.hero-grid{grid-template-columns:1fr}.hero{padding:60px 0}.features,.plans{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:repeat(2,1fr)}.contact-box{display:block}.contact-actions{margin-top:20px}}
+    @media(max-width:430px){section{padding:52px 0}.services,.why-grid{grid-template-columns:1fr 1fr}.contact-box{padding:24px}.brand{font-size:13px}.brand small{font-size:9px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Bajrang Internet Services home">
+      <span class="mark">B</span>
+      <span>BAJRANG <small>INTERNET SERVICES • PALERA</small></span>
+    </a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#services">Services</a><a href="#plans">Plans</a><a href="#why">Why Bajrang</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Palera's local fiber broadband service</div>
+        <h1>Fast internet.<br>Made for everyday life.</h1>
+        <p>घर, पढ़ाई और काम के लिए भरोसेमंद फाइबर ब्रॉडबैंड। Enjoy truly unlimited internet with local support from Bajrang Internet Services, Palera.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://wa.me/919893705006?text=Namaste%2C%20mujhe%20Bajrang%20Internet%20ka%20new%20connection%20chahiye." target="_blank" rel="noopener">WhatsApp for New Connection</a>
+          <a class="btn secondary" href="#plans">View Internet Plans</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="eyebrow">Simple. Affordable. Unlimited.</div>
+        <div class="speed">50<span> Mbps</span></div>
+        <p>Truly unlimited fiber broadband plan options. No FUP limit stated for these plans.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><h2>Internet that keeps you connected</h2><p>हर दिन के काम के लिए तेज़ और किफायती इंटरनेट।</p></div>
+      <div class="features">
+        <article class="feature"><div class="ico">∞</div><h3>Truly Unlimited</h3><p>No FUP data limit on the advertised broadband plans.</p></article>
+        <article class="feature"><div class="ico">⌂</div><h3>For Home & Work</h3><p>Useful for online classes, streaming, video calls and everyday browsing.</p></article>
+        <article class="feature"><div class="ico">☎</div><h3>Local Support</h3><p>Speak directly with your local Palera internet service provider.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans">
+    <div class="wrap">
+      <div class="section-head"><h2>Our Fiber Broadband Plans</h2><p>Choose a validity that suits your home or business.</p></div>
+      <div class="plans">
+        <article class="plan">
+          <span class="tag">3 Months</span><h3>50 Mbps Unlimited</h3>
+          <div class="price">₹1,999</div><small>For 3 months</small>
+          <ul><li>50 Mbps speed</li><li>Truly unlimited data</li><li>Router free to use</li></ul>
+          <a class="btn" href="https://wa.me/919893705006?text=I%20want%20details%20for%20the%2050%20Mbps%203-month%20plan." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+        </article>
+        <article class="plan best">
+          <span class="tag">6 Months</span><h3>50 Mbps Unlimited</h3>
+          <div class="price">₹2,999</div><small>For 6 months</small>
+          <ul><li>50 Mbps speed</li><li>Truly unlimited data</li><li>Router free to use</li></ul>
+          <a class="btn" href="https://wa.me/919893705006?text=I%20want%20details%20for%20the%2050%20Mbps%206-month%20plan." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+        </article>
+        <article class="plan">
+          <span class="tag">12 Months</span><h3>50 Mbps Unlimited</h3>
+          <div class="price">₹5,999</div><small>For 12 months</small>
+          <ul><li>50 Mbps speed</li><li>Truly unlimited data</li><li>Router free to use</li></ul>
+          <a class="btn" href="https://wa.me/919893705006?text=I%20want%20details%20for%20the%2050%20Mbps%2012-month%20plan." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+        </article>
+      </div>
+      <div class="addon"><strong>IPTV add-on available:</strong> Add IPTV to your broadband plan for an additional ₹200 per month. Ask us for package and channel details.</div>
+      <p class="note">Plans and availability are subject to confirmation. Please contact us before payment. Router is provided for use, not ownership.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head"><h2>Our Services</h2><p>Connectivity and entertainment solutions from one local provider.</p></div>
+      <div class="services">
+        <article class="service"><div class="ico">🌐</div><h3>Fiber Broadband</h3><p>High-speed home and business internet.</p></article>
+        <article class="service"><div class="ico">📺</div><h3>IPTV & OTT</h3><p>Ask about available television and OTT options.</p></article>
+        <article class="service"><div class="ico">🛰️</div><h3>Satellite TV</h3><p>Satellite television connection and recharge services.</p></article>
+        <article class="service"><div class="ico">🏢</div><h3>Leased Lines</h3><p>Business connectivity enquiries welcome.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="wrap">
+      <div class="section-head"><h2>Why Choose Bajrang?</h2><p>आपके शहर में, आपकी ज़रूरत के अनुसार इंटरनेट सेवा।</p></div>
+      <div class="why-grid">
+        <div class="why-item"><b>Local Palera Service</b><span>Local point of contact for your connection.</span></div>
+        <div class="why-item"><b>Truly Unlimited Plans</b><span>Broadband plans advertised without an FUP data cap.</span></div>
+        <div class="why-item"><b>Everyday Connectivity</b><span>For study, work, entertainment and communication.</span></div>
+        <div class="why-item"><b>Direct Enquiries</b><span>Contact Bajrang directly for plans and support.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <div><h2>Need a new connection?</h2><p>Contact Bajrang Internet Services, Palera, Madhya Pradesh.</p><p><strong>Call / WhatsApp: 9893705006</strong></p></div>
+        <div class="contact-actions">
+          <a class="btn wa" href="https://wa.me/919893705006?text=Namaste%2C%20mujhe%20Bajrang%20Internet%20Services%20ke%20plans%20ki%20jankari%20chahiye." target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="btn call" href="tel:+919893705006">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot"><span>© <span id="year">2026</span> Bajrang Internet Services, Palera.</span><span>Fiber Broadband • IPTV & OTT • Satellite TV • Leased Lines</span></div>
+</footer>
+</body>
+</html>
