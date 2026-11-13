@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer Management | Bajrang</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="portal.js"></script>
+<style>
+body{font-family:Arial;background:#eef3f9;margin:0;color:#18304d}
+header{background:#124b91;color:white;padding:18px}
+main{max-width:900px;margin:auto;padding:16px}
+.card{background:white;padding:18px;border-radius:12px;margin:14px 0}
+input,button{box-sizing:border-box;width:100%;padding:12px;margin:7px 0;font-size:16px}
+input{border:1px solid #ccc;border-radius:6px}
+button{background:#124b91;color:white;border:0;border-radius:6px}
+.customer{border-top:1px solid #ddd;padding:12px 0}
+#message{overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<header>
+<h2>Bajrang Internet Services</h2>
+<p>Customer Management</p>
+</header>
+<main>
+<div class="card">
+<h3>Add New Customer</h3>
+<form id="customerForm">
+<input id="fullName" placeholder="Customer full name" required>
+<input id="mobile" placeholder="Mobile number" required>
+<input id="address" placeholder="Full address" required>
+<button type="submit">Add Customer</button>
+</form>
+<p id="message"></p>
+</div>
+
+<div class="card">
+<h3>Customer List</h3>
+<input id="search" placeholder="Search by name, mobile or customer ID">
+<div id="customerList">Loading customers...</div>
+</div>
+<button id="backButton">Back to Dashboard</button>
+<button id="logoutButton">Logout</button>
+</main>
+
+<script>
+(async function(){
+ const client=window.bajrangSupabase;
+ const message=document.getElementById("message");
+ const list=document.getElementById("customerList");
+ let customers=[];
+
+ try{
+  const {data:{user},error}=await client.auth.getUser();
+  if(error||!user){
+   window.location.replace("admin.html");
+   return;
+  }
+
+  const {data:profile,error:profileError}=await client
+   .from("staff_profiles")
+   .select("role,is_active")
+   .eq("user_id",user.id)
+   .single();
+
+  if(profileError!profile!profile.is_active||
+     !["admin","staff"].includes(profile.role)){
+   await client.auth.signOut();
+   window.location.replace("admin.html");
+   return;
+  }
+
+  await loadCustomers();
+
+  async function loadCustomers(){
+   list.textContent="Loading customers...";
+   const {data,error}=await client
+    .from("customers")
+    .select("id,customer_code,full_name,mobile,address")
+    .order("created_at",{ascending:false});
+
+   if(error){
+    list.textContent="Error loading customers: "+error.message;
+    return;
+   }
+   customers=data||[];
+   renderCustomers();
+  }
+
+  function renderCustomers(){
+   const term=document.getElementById("search").value.toLowerCase();
+   const filtered=customers.filter(c=>
+    [c.customer_code,c.full_name,c.mobile]
+     .some(v=>(v||"").toLowerCase().includes(term))
+   );
+   list.innerHTML="";
+   if(!filtered.length){
+    list.textContent="No customers found.";
+    return;
+   }
+   filtered.forEach(c=>{
+    const item=document.createElement("div");
+    item.className="customer";
+    const title=document.createElement("strong");
+    title.textContent=(c.customer_code"No ID")+" - "+(c.full_name"");
+    const details=document.createElement("p");
+    details.textContent=(c.mobile"")+" | "+(c.address"");
+    item.append(title,details);
+    list.appendChild(item);
+   });
+  }
+
+  document.getElementById("search").addEventListener("input",renderCustomers);
+
+  document.getElementById("customerForm").addEventListener("submit",async e=>{
+   e.preventDefault();
+   message.textContent="Adding customer...";
+   const {error}=await client.from("customers").insert({
+    full_name:document.getElementById("fullName").value.trim(),
+    mobile:document.getElementById("mobile").value.trim(),
+    address:document.getElementById("address").value.trim()
+   });
+   if(error){
+    message.textContent="Error: "+error.message;
+    return;
+   }
+   message.textContent="Customer added successfully!";
+   e.target.reset();
+   await loadCustomers();
+  });
+
+ }catch(error){
+  message.textContent="Error: "+error.message;
+ }
+  document.getElementById("backButton").onclick=()=>location.href="dashboard.html";
+ document.getElementById("logoutButton").onclick=async()=>{
+  await client.auth.signOut();
+  location.href="admin.html";
+ };
+})();
+</script>
+</body>
+</html>
