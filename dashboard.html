@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bajrang Admin Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="portal.js"></script>
+<style>
+body{font-family:Arial;background:#eef3f9;margin:0;color:#18304d}
+header{background:#124b91;color:white;padding:20px}
+main{padding:18px;max-width:850px;margin:auto}
+.card{background:white;padding:20px;margin:14px 0;border-radius:12px;box-shadow:0 2px 8px #0001}
+h2{margin-top:0}
+button{background:#124b91;color:white;border:0;padding:12px 20px;border-radius:7px;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.tile{background:white;padding:20px 12px;border-radius:10px;text-align:center}
+#message{overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<header>
+<h2>Bajrang Internet Services</h2>
+<p>Admin Dashboard</p>
+</header>
+<main>
+<div class="card">
+<h2>Welcome</h2>
+<p id="staffName">Checking login...</p>
+<p id="staffRole"></p>
+<p id="message" role="status"></p>
+<button id="logoutButton">Logout</button>
+</div>
+
+<h2>Portal Management</h2>
+<div class="grid">
+<div class="tile">👥<p>Customers</p></div>
+<div class="tile">🌐<p>Internet Accounts</p></div>
+<div class="tile">🔄<p>Renewals</p></div>
+<div class="tile">💳<p>Payments</p></div>
+<div class="tile">📺<p>DishTV</p></div>
+<div class="tile">👨‍💼<p>Staff</p></div>
+</div>
+<p class="card">Management sections will be activated in upcoming development steps.</p>
+</main>
+
+<script>
+(async function(){
+ const client=window.bajrangSupabase;
+ const name=document.getElementById("staffName");
+ const role=document.getElementById("staffRole");
+ const message=document.getElementById("message");
+
+ try{
+  const {data:{user},error}=await client.auth.getUser();
+  if(error||!user){
+   window.location.replace("admin.html");
+   return;
+  }
+
+  const {data:profile,error:profileError}=await client
+   .from("staff_profiles")
+   .select("full_name,role,is_active")
+   .eq("user_id",user.id)
+   .single();
+
+  if(profileError!profile!profile.is_active||
+     !["admin","staff"].includes(profile.role)){
+   await client.auth.signOut();
+   window.location.replace("admin.html");
+   return;
+  }
+
+  name.textContent="Welcome, "+profile.full_name;
+  role.textContent="Your role: "+profile.role;
+ }catch(error){
+  message.textContent="Error: "+error.message;
+ }
+})();
+
+document.getElementById("logoutButton").addEventListener("click",async function(){
+ await window.bajrangSupabase.auth.signOut();
+ window.location.replace("admin.html");
+});
+</script>
+</body>
+</html>
