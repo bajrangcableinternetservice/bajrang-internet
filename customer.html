@@ -64,7 +64,7 @@ button{background:#124b91;color:white;border:0;border-radius:6px}
    .eq("user_id",user.id)
    .single();
 
-  if(profileError!profile!profile.is_active||
+  if(profileError || !profile || !profile.is_active||
      !["admin","staff"].includes(profile.role)){
    await client.auth.signOut();
    window.location.replace("admin.html");
