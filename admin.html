@@ -36,6 +36,7 @@ button{background:#124b91;color:white;border:0;cursor:pointer}
   const button = document.getElementById("loginButton");
 
   form.addEventListener("submit", async function(event) {
+    alert("Original login handler started");
     event.preventDefault();
     event.stopPropagation();
 
