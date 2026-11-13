@@ -58,7 +58,7 @@ button{background:#124b91;color:white;border:0;cursor:pointer}
         .eq("user_id", data.user.id)
         .single();
 
-      if (profileError  !profile  !profile.is_active ||
+      if (profileError || !profile || !profile.is_active ||
           !["admin", "staff"].includes(profile.role)) {
         await client.auth.signOut();
         throw new Error("Staff access not authorized. Contact administrator.");
