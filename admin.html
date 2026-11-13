@@ -1,86 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Staff Login | Bajrang Internet Services</title>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="portal.js"></script>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #eef3f9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .login {
-      background: white;
-      padding: 30px;
-      border-radius: 14px;
-      width: 90%;
-      max-width: 380px;
-      box-shadow: 0 5px 25px #0002;
-    }
-    h2 { text-align: center; color: #124b91; }
-    input, button {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 13px;
-      margin-top: 14px;
-      border-radius: 7px;
-      font-size: 16px;
-    }
-    input { border: 1px solid #ccc; }
-    button {
-      background: #124b91;
-      color: white;
-      border: 0;
-      cursor: pointer;
-    }
-    #message { text-align: center; margin-top: 15px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bajrang Staff Login</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="portal.js"></script>
+<style>
+body{font-family:Arial;background:#eef3f9;display:flex;justify-content:center;align-items:center;min-height:100vh;margin:0}
+.login{background:white;padding:30px;border-radius:14px;width:90%;max-width:380px;box-sizing:border-box}
+h2{text-align:center;color:#124b91}
+input,button{width:100%;box-sizing:border-box;padding:14px;margin-top:15px;font-size:16px;border-radius:7px}
+input{border:1px solid #ccc}
+button{background:#124b91;color:white;border:0;cursor:pointer}
+#message{text-align:center;overflow-wrap:anywhere}
+</style>
 </head>
 <body>
-  <div class="login">
-    <h2>Bajrang Internet Services</h2>
-    <p style="text-align:center">Admin & Staff Login</p>
-    <form id="loginForm">
-      <input id="email" type="email" placeholder="Registered email" required>
-      <input id="password" type="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-    <p id="message"></p>
-  </div>
+<div class="login">
+<h2>Bajrang Internet Services</h2>
+<p style="text-align:center">Admin & Staff Login</p>
+<form id="loginForm">
+<input id="email" type="email" placeholder="Registered email" required>
+<input id="password" type="password" placeholder="Password" required>
+<button id="loginButton" type="submit">Login</button>
+</form>
+<p id="message" role="status"></p>
+</div>
 
-  <script>
-    const client = window.bajrangSupabase;
-    const form = document.getElementById("loginForm");
-    const message = document.getElementById("message");
+<script>
+(() => {
+  const client = window.bajrangSupabase;
+  const form = document.getElementById("loginForm");
+  const message = document.getElementById("message");
+  const button = document.getElementById("loginButton");
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      message.textContent = "Checking login...";
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault();
+    event.stopPropagation();
 
-      if (!client) {
-        message.textContent = "Connection error. Refresh and try again.";
-        return;
-      }
+    message.textContent = "Checking login...";
+    button.disabled = true;
+
+    try {
+      if (!client) throw new Error("Supabase connection missing. Refresh page.");
 
       const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value;
 
-      const { data, error } = await client.auth.signInWithPassword({
-        email,
-        password
-      });
-
-      if (error) {
-        message.textContent = error.message;
-        return;
-      }
+      const { data, error } = await client.auth.signInWithPassword({email, password});
+      if (error) throw error;
 
       const { data: profile, error: profileError } = await client
         .from("staff_profiles")
@@ -88,20 +57,20 @@
         .eq("user_id", data.user.id)
         .single();
 
-      if (profileError  !profile  !profile.is_active) {
+      if (profileError  !profile  !profile.is_active ||
+          !["admin", "staff"].includes(profile.role)) {
         await client.auth.signOut();
-        message.textContent = "Staff access not authorized.";
-        return;
+        throw new Error("Staff access not authorized. Contact administrator.");
       }
 
-      if (!["admin", "staff"].includes(profile.role)) {
-        await client.auth.signOut();
-        message.textContent = "Invalid staff role.";
-        return;
-      }
-
-      message.textContent = "Welcome, " + profile.full_name + " (" + profile.role + ")";
-    });
-  </script>
+      message.textContent = "Login successful. Welcome, " + profile.full_name + " (" + profile.role + ").";
+    } catch (error) {
+      message.textContent = "Login failed: " + error.message;
+    } finally {
+      button.disabled = false;
+    }
+  });
+})();
+</script>
 </body>
 </html>
