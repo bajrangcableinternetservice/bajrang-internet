@@ -6,7 +6,7 @@ BAJRANG INTERNET SERVICES - MULTI-PAGE WEBSITE
 5. Your pages: index.html, new-connection.html, renewal.html, dishtv.html, services.html, contact.html.
 
 PAYMENT NOTES:
-- UPI ID configured: dharmed13@ibl
+- UPI ID configured: dharmend13@ibl
 - Payment contact/mobile number: 9893705006
 - Existing-customer internet renewal opens the UPI app directly and does not send a WhatsApp request.
 - The site launches a UPI payment intent; supported UPI apps may open depending on the visitor's phone/browser.
