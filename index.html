@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bajrang Internet Services Palera - high-speed fiber broadband, business internet, IPTV, OTT and satellite TV.">
+<meta name="theme-color" content="#071a35">
+<title>Bajrang Internet Services | Premium Fiber Broadband in Palera</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+
+<style>
+:root{
+  --premium-navy:#071a35;
+  --premium-navy2:#0b2b50;
+  --premium-blue:#0878d1;
+  --premium-cyan:#27b8f2;
+  --premium-orange:#f28c28;
+  --premium-ink:#10243d;
+  --premium-muted:#61738a;
+  --premium-pale:#f2f7fc;
+  --premium-white:#fff;
+  --premium-shadow:0 18px 50px rgba(7,26,53,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--premium-ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+body.welcome-active{overflow:hidden}
+a{text-decoration:none}
+.premium-shell{overflow:hidden}
+.premium-topbar{background:#041329;color:#d8e8f8;padding:9px 5%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;letter-spacing:.02em}
+.premium-topbar a{color:#fff}
+.premium-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid #e8eef5;box-shadow:0 5px 24px rgba(7,26,53,.05)}
+.premium-navwrap{max-width:1200px;margin:auto;min-height:82px;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.premium-brand{display:flex;align-items:center;gap:12px;color:var(--premium-navy);font-weight:900;letter-spacing:.04em;line-height:1.05}
+.premium-brand img{width:62px;height:54px;object-fit:contain}
+.premium-brand span{font-size:20px}
+.premium-brand small{display:block;margin-top:5px;font-size:9px;letter-spacing:.18em;color:#62758b;font-weight:800}
+.premium-menu-btn{display:none;border:0;background:var(--premium-navy);color:white;border-radius:12px;padding:10px 14px;font-size:22px}
+.premium-nav{display:flex;align-items:center;gap:23px}
+.premium-nav a{color:#31465f;font-size:13px;font-weight:750;transition:color .2s}
+.premium-nav a:hover{color:var(--premium-blue)}
+.premium-nav .nav-cta{background:var(--premium-blue);color:#fff;padding:12px 17px;border-radius:999px;box-shadow:0 8px 18px rgba(8,120,209,.2)}
+.premium-nav .nav-cta:hover{background:var(--premium-navy);color:#fff}
+.premium-hero{position:relative;isolation:isolate;background:radial-gradient(ellipse at 78% 28%,rgba(39,184,242,.27),transparent 32%),linear-gradient(118deg,#06162d 0%,#0a2b50 55%,#075da5 100%);color:#fff;padding:92px 24px 88px}
+.premium-hero:before,.premium-hero:after{content:"";position:absolute;z-index:-1;border:1px solid rgba(255,255,255,.13);border-radius:50%;width:540px;height:540px;right:-130px;top:-190px}
+.premium-hero:after{width:700px;height:700px;right:-210px;top:-270px;border-color:rgba(255,255,255,.08)}
+.premium-hero-inner{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:45px}
+.premium-eyebrow{display:inline-flex;align-items:center;gap:9px;color:#bdeaff;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:9px 14px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.premium-eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:#62d5ff;box-shadow:0 0 12px #62d5ff}
+.premium-hero h1{font-size:clamp(38px,5.3vw,66px);line-height:1.04;letter-spacing:-.045em;margin:23px 0 19px;max-width:700px;color:#fff}
+.premium-hero h1 em{font-style:normal;color:#69d4ff}
+.premium-hero-copy{font-size:17px;line-height:1.75;color:#d3e5f5;max-width:610px;margin:0 0 29px}
+.premium-actions{display:flex;gap:13px;flex-wrap:wrap}
+.premium-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:15px 23px;font-size:14px;font-weight:850;transition:transform .2s,box-shadow .2s,background .2s}
+.premium-btn:hover{transform:translateY(-3px)}
+.premium-btn-primary{background:var(--premium-orange);color:#111f31;box-shadow:0 12px 25px rgba(242,140,40,.23)}
+.premium-btn-primary:hover{background:#ffa646}
+.premium-btn-light{border:1px solid rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.07)}
+.premium-hero-note{margin-top:22px;color:#b7cce0;font-size:12px}
+.premium-hero-visual{min-height:360px;display:flex;align-items:center;justify-content:center;position:relative}
+.premium-orbit{width:min(100%,410px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(160,224,255,.28);display:flex;align-items:center;justify-content:center;position:relative;background:radial-gradient(circle,rgba(54,177,244,.19),rgba(255,255,255,.025) 55%,transparent 70%);box-shadow:inset 0 0 65px rgba(52,178,245,.13),0 0 75px rgba(39,184,242,.13)}
+.premium-orbit:before,.premium-orbit:after{content:"";position:absolute;inset:9%;border:1px dashed rgba(164,222,255,.28);border-radius:50%;animation:orbitSpin 32s linear infinite}
+.premium-orbit:after{inset:20%;border-style:solid;animation-direction:reverse;animation-duration:24s}
+.premium-signal-core{width:47%;aspect-ratio:1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(145deg,#ffffff,#c8edff);color:#07345c;box-shadow:0 0 0 15px rgba(255,255,255,.06),0 0 60px rgba(68,198,255,.5)}
+.premium-signal-core strong{font-size:clamp(38px,5vw,60px);line-height:1;font-weight:950;letter-spacing:-.06em}
+.premium-signal-core span{font-size:11px;font-weight:900;letter-spacing:.16em;margin-top:9px}
+.premium-float{position:absolute;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(12px);padding:12px 16px;border-radius:14px;color:#fff;font-size:12px;font-weight:800;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.premium-float.one{top:13%;right:0}.premium-float.two{bottom:13%;left:0}
+@keyframes orbitSpin{to{transform:rotate(360deg)}}
+.premium-proof{position:relative;z-index:2;max-width:1050px;margin:-31px auto 0;padding:0 20px}
+.premium-proof-inner{background:#fff;border:1px solid #e6edf5;border-radius:18px;box-shadow:var(--premium-shadow);display:grid;grid-template-columns:repeat(3,1fr);padding:22px 12px}
+.premium-proof-item{text-align:center;padding:4px 14px;border-right:1px solid #e9eff5}
+.premium-proof-item:last-child{border:0}
+.premium-proof-item strong{display:block;font-size:26px;line-height:1.15;color:var(--premium-navy);font-weight:950}
+.premium-proof-item span{display:block;margin-top:6px;font-size:11px;color:var(--premium-muted);font-weight:750;letter-spacing:.04em}
+.premium-section{padding:82px 24px}
+.premium-section-inner{max-width:1150px;margin:auto}
+.premium-section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+.premium-label{color:var(--premium-blue);font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+.premium-section h2{font-size:clamp(29px,4vw,43px);line-height:1.12;letter-spacing:-.035em;color:var(--premium-navy);margin:13px 0}
+.premium-section-head p{color:var(--premium-muted);font-size:15px;line-height:1.7;margin:0}
+.premium-plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.premium-plan{position:relative;border:1px solid #e4ebf3;border-radius:20px;padding:27px;background:#fff;box-shadow:0 10px 35px rgba(7,26,53,.055);transition:transform .25s,box-shadow .25s}
+.premium-plan:hover{transform:translateY(-7px);box-shadow:var(--premium-shadow)}
+.premium-plan.featured{border:2px solid var(--premium-blue);box-shadow:0 18px 45px rgba(8,120,209,.13)}
+.premium-popular{position:absolute;right:18px;top:17px;background:#e8f5ff;color:#0878d1;border-radius:999px;padding:7px 10px;font-size:9px;font-weight:950;letter-spacing:.08em}
+.premium-plan-type{font-size:11px;font-weight:900;color:var(--premium-blue);letter-spacing:.15em;text-transform:uppercase}
+.premium-plan h3{font-size:24px;color:var(--premium-navy);margin:12px 0 7px}
+.premium-plan-desc{font-size:13px;color:var(--premium-muted);min-height:38px;line-height:1.5}
+.premium-price{font-size:34px;font-weight:950;letter-spacing:-.05em;color:var(--premium-navy);margin:20px 0 4px}
+.premium-price small{font-size:12px;color:var(--premium-muted);font-weight:700;letter-spacing:0}
+.premium-plan ul{padding:17px 0 0;margin:17px 0 22px;border-top:1px solid #edf1f6;list-style:none}
+.premium-plan li{padding:7px 0;color:#43566d;font-size:13px}
+.premium-plan li:before{content:"✓";color:#0b9b72;font-weight:950;margin-right:9px}
+.premium-plan .premium-btn{width:100%;padding:13px}
+.premium-plan-note{text-align:center;color:#77879a;font-size:11px;margin-top:22px}
+.premium-feature-band{background:var(--premium-pale)}
+.premium-feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.premium-feature{background:#fff;border:1px solid #e7eef6;border-radius:17px;padding:23px;min-height:190px}
+.premium-feature-icon{width:44px;height:44px;border-radius:13px;background:#eaf5ff;color:var(--premium-blue);display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:18px}
+.premium-feature h3{font-size:16px;color:var(--premium-navy);margin:0 0 9px}
+.premium-feature p{font-size:12px;line-height:1.65;color:var(--premium-muted);margin:0}
+.premium-entertainment{background:linear-gradient(120deg,#06172f,#0b3b68);color:#fff;border-radius:26px;padding:42px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px;overflow:hidden;position:relative}
+.premium-entertainment:after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;right:12%;top:-230px;border:1px solid rgba(255,255,255,.16);box-shadow:0 0 0 35px rgba(255,255,255,.025),0 0 0 70px rgba(255,255,255,.02)}
+.premium-entertainment h2{color:#fff;margin:10px 0;font-size:clamp(26px,3.5vw,38px)}
+.premium-entertainment p{color:#c7d9ea;max-width:650px;line-height:1.7;font-size:14px;margin:0}
+.premium-entertainment .premium-btn{position:relative;z-index:1;white-space:nowrap}
+.premium-business-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.premium-business-panel{background:linear-gradient(145deg,#eaf6ff,#f7fbff);border:1px solid #dcecf8;border-radius:22px;padding:32px}
+.premium-business-panel h3{font-size:25px;color:var(--premium-navy);margin:10px 0}
+.premium-business-panel p{color:var(--premium-muted);font-size:14px;line-height:1.7}
+.premium-business-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.premium-business-list span{font-size:12px;font-weight:800;color:#29445f;background:#fff;padding:12px;border-radius:10px}
+.premium-business-copy h2{margin:10px 0 15px}
+.premium-business-copy p{color:var(--premium-muted);line-height:1.8;font-size:14px}
+.premium-business-copy .premium-btn{margin-top:12px}
+.premium-final-cta{background:linear-gradient(110deg,#0878d1,#064c8a);color:#fff;border-radius:22px;padding:36px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.premium-final-cta h2{color:#fff;margin:0 0 8px;font-size:clamp(24px,3vw,34px)}
+.premium-final-cta p{color:#d8edff;margin:0;font-size:13px}
+.premium-footer{background:#041329;color:#d3e2f1;padding:55px 24px 20px}
+.premium-footer-inner{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}
+.premium-footer h3{color:#fff;font-size:13px;letter-spacing:.12em;margin:0 0 17px}
+.premium-footer p,.premium-footer a{color:#aebfd1;font-size:12px;line-height:1.8}
+.premium-footer a{display:block;margin:7px 0}
+.premium-footer a:hover{color:#fff}
+.premium-footer-brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:950;font-size:19px}
+.premium-footer-brand img{width:65px;height:55px;object-fit:contain;background:#fff;border-radius:10px}
+.premium-copyright{max-width:1150px;margin:35px auto 0;border-top:1px solid rgba(255,255,255,.12);padding-top:18px;text-align:center;color:#8296ab;font-size:11px}
+#premium-welcome{position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:22px;padding:24px;text-align:center;background:radial-gradient(ellipse at center,#153b68 0%,#071a33 48%,#030b18 100%);opacity:1;visibility:visible;transition:opacity .8s ease,visibility .8s ease}
+#premium-welcome.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.welcome-logo-wrap{position:relative;display:flex;align-items:center;justify-content:center;width:min(76vw,290px);min-height:170px}
+.welcome-logo-wrap:before{content:"";position:absolute;width:115%;height:115%;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.75) 0%,rgba(91,190,255,.42) 22%,rgba(28,112,220,.16) 48%,transparent 72%);filter:blur(12px);animation:welcomeGlow 2.1s ease-in-out infinite alternate}
+.welcome-logo{position:relative;z-index:1;display:block;width:100%;max-height:190px;object-fit:contain;filter:drop-shadow(0 0 18px rgba(255,255,255,.55));animation:welcomeLogoIn 1.3s cubic-bezier(.2,.8,.2,1) both}
+.welcome-copy{position:relative;z-index:1;color:#fff;font-family:Arial,Helvetica,sans-serif;text-shadow:0 3px 18px rgba(0,0,0,.55);animation:welcomeTextIn 1s .55s both}
+.welcome-kicker{display:block;margin-bottom:9px;font-size:clamp(15px,3vw,21px);font-weight:700;letter-spacing:.32em;color:#bfe8ff}
+.welcome-title{display:block;max-width:900px;font-size:clamp(23px,5.2vw,43px);line-height:1.2;font-weight:900;letter-spacing:.035em}
+@keyframes welcomeGlow{from{transform:scale(.82);opacity:.65}to{transform:scale(1.12);opacity:1}}
+@keyframes welcomeLogoIn{from{opacity:0;transform:scale(.72);filter:brightness(2.5) drop-shadow(0 0 32px #fff)}to{opacity:1;transform:scale(1);filter:brightness(1) drop-shadow(0 0 18px rgba(255,255,255,.55))}}
+@keyframes welcomeTextIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){
+ .premium-hero-inner{grid-template-columns:1fr;gap:20px}.premium-hero{padding-top:65px}.premium-hero-visual{min-height:300px}.premium-orbit{width:min(75vw,350px)}
+ .premium-feature-grid{grid-template-columns:repeat(2,1fr)}.premium-plan-grid{grid-template-columns:1fr 1fr}.premium-plan:last-child{grid-column:1/-1}
+ .premium-nav{gap:13px}.premium-nav a{font-size:12px}
+}
+@media(max-width:680px){
+ .premium-topbar{justify-content:center;text-align:center;font-size:10px;padding:8px 12px}
+ .premium-navwrap{min-height:70px;padding:10px 16px}.premium-brand img{width:51px;height:47px}.premium-brand span{font-size:16px}
+ .premium-menu-btn{display:block}.premium-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:12px 20px 20px;box-shadow:0 15px 20px rgba(7,26,53,.12);flex-direction:column;align-items:stretch;gap:0}
+ .premium-nav.open{display:flex}.premium-nav a{padding:13px 5px;border-bottom:1px solid #edf1f6;font-size:14px}.premium-nav .nav-cta{text-align:center;margin-top:10px;border:0}
+ .premium-hero{padding:54px 20px 68px}.premium-hero h1{font-size:42px}.premium-hero-copy{font-size:15px}.premium-hero-visual{min-height:260px}.premium-orbit{width:min(78vw,300px)}
+ .premium-float{font-size:10px;padding:9px 11px}.premium-proof-inner{grid-template-columns:1fr;padding:9px 16px}.premium-proof-item{border-right:0;border-bottom:1px solid #edf1f6;padding:13px}.premium-proof-item:last-child{border-bottom:0}
+ .premium-section{padding:62px 18px}.premium-plan-grid{grid-template-columns:1fr}.premium-plan:last-child{grid-column:auto}.premium-plan{padding:23px}
+ .premium-feature-grid{grid-template-columns:1fr 1fr;gap:10px}.premium-feature{padding:17px;min-height:185px}
+ .premium-entertainment{padding:27px 23px;grid-template-columns:1fr}.premium-entertainment .premium-btn{justify-self:start}
+ .premium-business-grid{grid-template-columns:1fr}.premium-business-panel{padding:24px}.premium-business-list{grid-template-columns:1fr 1fr}
+ .premium-final-cta{padding:27px 22px;align-items:flex-start;flex-direction:column}.premium-footer-inner{grid-template-columns:1fr;gap:24px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+
+<body class="welcome-active">
+<div id="premium-welcome" role="status" aria-live="polite" aria-label="Welcome to Bajrang Internet Services">
+  <div class="welcome-logo-wrap">
+    <img class="welcome-logo" src="logo.png" alt="Bajrang Internet Services logo" onerror="this.style.display='none'">
+  </div>
+  <div class="welcome-copy">
+    <span class="welcome-kicker">WELCOME TO</span>
+    <span class="welcome-title">BAJRANG INTERNET SERVICES</span>
+  </div>
+</div>
+
+<div class="premium-shell">
+  <div class="premium-topbar">
+    <span>⌖ Ward No. 9, Bajrang Muhalla, Palera, Tikamgarh (M.P.)</span>
+    <span>☎ <a href="tel:9893705006">9893705006</a> &nbsp; | &nbsp; <a href="mailto:bajrangcableinternetservice@gmail.com">bajrangcableinternetservice@gmail.com</a></span>
+  </div>
+
+  <header class="premium-header">
+    <div class="premium-navwrap">
+      <a class="premium-brand" href="index.html">
+        <img src="logo.png" alt="Bajrang logo" onerror="this.style.display='none'">
+        <span>BAJRANG<small>INTERNET SERVICES · PALERA</small></span>
+      </a>
+      <button class="premium-menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+      <nav class="premium-nav">
+        <a href="index.html">Home</a>
+        <a href="new-connection.html">New Connection</a>
+        <a href="renewal.html">Recharge / Renewal</a>
+        <a href="dishtv.html">DishTV</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="https://wa.me/919893705006?text=Hello%20Bajrang%20Internet%20Services%2C%20I%20want%20a%20new%20connection.">Get Connected</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="premium-hero">
+      <div class="premium-hero-inner">
+        <div>
+          <span class="premium-eyebrow">Palera's fiber internet network</span>
+          <h1>Experience the power of <em>true fiber internet.</em></h1>
+          <p class="premium-hero-copy">Fast, dependable connectivity for your home, your entertainment and your business — backed by local support from Bajrang Internet Services.</p>
+          <div class="premium-actions">
+            <a class="premium-btn premium-btn-primary" href="new-connection.html">Explore Plans <span>→</span></a>
+            <a class="premium-btn premium-btn-light" href="renewal.html">Recharge Existing Connection</a>
+          </div>
+          <p class="premium-hero-note">Fiber Broadband&nbsp; • &nbsp;Business Connectivity&nbsp; • &nbsp;IPTV & OTT</p>
+        </div>
+        <div class="premium-hero-visual" aria-label="Fiber internet speed visual">
+          <div class="premium-orbit">
+            <div class="premium-signal-core"><strong>FIBER</strong><span>POWERED INTERNET</span></div>
+            <div class="premium-float one">⚡ High-speed connectivity</div>
+            <div class="premium-float two">⌁ Built for everyday life</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="premium-proof" aria-label="Bajrang service highlights">
+      <div class="premium-proof-inner">
+        <div class="premium-proof-item"><strong>500+</strong><span>HAPPY CUSTOMER FAMILIES</span></div>
+        <div class="premium-proof-item"><strong>Local</strong><span>PALERA-BASED SUPPORT</span></div>
+        <div class="premium-proof-item"><strong>One</strong><span>PLACE FOR INTERNET & ENTERTAINMENT</span></div>
+      </div>
+    </section>
+
+    <section class="premium-section">
+      <div class="premium-section-inner">
+        <div class="premium-section-head">
+          <span class="premium-label">Choose your connection</span>
+          <h2>Find the right plan for your world.</h2>
+          <p>Whether you need everyday home internet or powerful business connectivity, explore a plan that fits your needs.</p>
+        </div>
+        <div class="premium-plan-grid">
+          <article class="premium-plan">
+            <span class="premium-plan-type">Home broadband</span>
+            <h3>50 Mbps Fiber</h3>
+            <p class="premium-plan-desc">Smooth browsing, online classes, streaming and everyday family use.</p>
+            <div class="premium-price">₹1,999 <small>/ 3 months</small></div>
+            <ul>
+              <li>Unlimited data plan</li>
+              <li>Fiber optic broadband</li>
+              <li>Great for connected homes</li>
+            </ul>
+            <a class="premium-btn premium-btn-primary" href="new-connection.html">View Plan</a>
+          </article>
+
+          <article class="premium-plan featured">
+            <span class="premium-popular">POPULAR CHOICE</span>
+            <span class="premium-plan-type">High-speed broadband</span>
+            <h3>100 Mbps Fiber</h3>
+            <p class="premium-plan-desc">More speed for multiple devices, streaming, work and busy households.</p>
+            <div class="premium-price">₹2,499 <small>/ 3 months</small></div>
+            <ul>
+              <li>Unlimited data plan</li>
+              <li>High-speed fiber connectivity</li>
+              <li>Ideal for multiple devices</li>
+            </ul>
+            <a class="premium-btn premium-btn-primary" href="new-connection.html">View Plan</a>
+          </article>
+
+          <article class="premium-plan">
+            <span class="premium-plan-type">Business connectivity</span>
+            <h3>Business Broadband</h3>
+            <p class="premium-plan-desc">A connectivity solution for offices, shops, institutions and teams.</p>
+            <div class="premium-price">100 Mbps <small>symmetric plan</small></div>
+            <ul>
+              <li>Symmetric bandwidth offering</li>
+              <li>Designed for business use</li>
+              <li>Local service and support</li>
+            </ul>
+            <a class="premium-btn premium-btn-primary" href="new-connection.html">Business Enquiry</a>
+          </article>
+        </div>
+        <p class="premium-plan-note">Plan terms and availability apply. Visit the plans page for full details and current offers.</p>
+      </div>
+    </section>
+
+    <section class="premium-section premium-feature-band">
+      <div class="premium-section-inner">
+        <div class="premium-section-head">
+          <span class="premium-label">The Bajrang advantage</span>
+          <h2>More than just an internet connection.</h2>
+          <p>Local service, fiber-based connectivity and solutions for the way Palera lives, learns and works.</p>
+        </div>
+        <div class="premium-feature-grid">
+          <article class="premium-feature"><div class="premium-feature-icon">⌁</div><h3>Fiber Optic Network</h3><p>Fiber-based broadband designed for a fast and dependable internet experience.</p></article>
+          <article class="premium-feature"><div class="premium-feature-icon">♧</div><h3>Local Support</h3><p>Speak directly with your local service provider for internet-related assistance.</p></article>
+          <article class="premium-feature"><div class="premium-feature-icon">⌂</div><h3>For Every Home</h3><p>Connectivity for online learning, work, entertainment and everyday browsing.</p></article>
+          <article class="premium-feature"><div class="premium-feature-icon">▣</div><h3>Complete Solutions</h3><p>Broadband, IPTV, OTT, satellite TV and networking services in one place.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="premium-section">
+      <div class="premium-section-inner">
+        <div class="premium-entertainment">
+          <div>
+            <span class="premium-label" style="color:#80d9ff">Internet meets entertainment</span>
+            <h2>One connection. More ways to enjoy.</h2>
+            <p>Explore broadband with OTT and IPTV entertainment options, plus satellite TV services from Bajrang Internet Services.</p>
+          </div>
+          <a class="premium-btn premium-btn-primary" href="services.html">Explore Services →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="premium-section">
+      <div class="premium-section-inner premium-business-grid">
+        <div class="premium-business-panel">
+          <span class="premium-label">For businesses</span>
+          <h3>Connectivity that keeps your work moving.</h3>
+          <p>Explore business broadband and networking solutions for offices, shops, schools and other organisations.</p>
+          <div class="premium-business-list">
+            <span>✓ Symmetric bandwidth plans</span>
+            <span>✓ Multiple device support</span>
+            <span>✓ Fiber connectivity</span>
+            <span>✓ Local service support</span>
+          </div>
+        </div>
+        <div class="premium-business-copy">
+          <span class="premium-label">Business solutions</span>
+          <h2>Power your workplace with reliable connectivity.</h2>
+          <p>From business broadband to leased lines, static IP and network installations, Bajrang can help you explore a connectivity setup for your requirements.</p>
+          <a class="premium-btn premium-btn-primary" href="https://wa.me/919893705006?text=Hello%2C%20I%20want%20to%20enquire%20about%20business%20broadband.">Enquire for Business Internet →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="premium-section" style="padding-top:10px">
+      <div class="premium-section-inner">
+        <div class="premium-final-cta">
+          <div>
+            <h2>Ready to experience better connectivity?</h2>
+            <p>Talk to Bajrang Internet Services and find the right plan for you.</p>
+          </div>
+          <a class="premium-btn premium-btn-primary" href="https://wa.me/919893705006?text=Hello%20Bajrang%20Internet%20Services%2C%20please%20help%20me%20get%20connected.">Get Connected Today →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="premium-footer">
+    <div class="premium-footer-inner">
+      <div>
+        <div class="premium-footer-brand"><img src="logo.png" alt="Bajrang logo" onerror="this.style.display='none'"><span>BAJRANG<br><small style="font-size:9px;letter-spacing:.16em">INTERNET SERVICES · PALERA</small></span></div>
+        <p>High Speed Unlimited Fiber Internet Services. Your local destination for broadband, entertainment and networking solutions.</p>
+      </div>
+      <div>
+        <h3>QUICK LINKS</h3>
+        <a href="index.html">Home</a>
+        <a href="new-connection.html">New Connection</a>
+        <a href="renewal.html">Recharge / Renewal</a>
+        <a href="dishtv.html">DishTV</a>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>CONTACT US</h3>
+        <a href="tel:9893705006">☎ 9893705006</a>
+        <a href="https://wa.me/919893705006">WhatsApp Bajrang</a>
+        <a href="mailto:bajrangcableinternetservice@gmail.com">bajrangcableinternetservice@gmail.com</a>
+        <p>Ward No. 9, Bajrang Muhalla,<br>Palera, Tikamgarh (M.P.)</p>
+      </div>
+    </div>
+    <div class="premium-copyright">© Bajrang Internet Services, Palera. All rights reserved.</div>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="portal.js"></script>
+<script>
+(function(){
+  var splash = document.getElementById('premium-welcome');
+  if (!splash) return;
+  function hideWelcome(){
+    window.setTimeout(function(){
+      splash.classList.add('is-hidden');
+      document.body.classList.remove('welcome-active');
+      window.setTimeout(function(){
+        if (splash.parentNode) splash.parentNode.removeChild(splash);
+      }, 850);
+    }, 3000);
+  }
+  if (document.readyState === 'complete') hideWelcome();
+  else window.addEventListener('load', hideWelcome, {once:true});
+})();
+</script>
+</body>
+</html>
