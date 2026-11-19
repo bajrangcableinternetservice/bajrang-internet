@@ -5,218 +5,528 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bajrang Internet Services Palera - fiber broadband, IPTV, OTT and satellite TV">
-<title>New Connection | Bajrang Internet Services</title>
-<link rel="stylesheet" href="style.css">
-<script defer src="script.js"></script>
+<meta name="theme-color" content="#071a35">
+<meta name="description" content="Explore residential fiber broadband, IPTV combo and 100 Mbps business fiber connection offers from Bajrang Internet Services, Palera.">
+<title>New Connection Plans | Bajrang Internet Services Palera</title>
+<style>
+:root{--navy:#071a35;--navy2:#0b2b50;--blue:#0878d1;--cyan:#27b8f2;--orange:#f28c28;--ink:#10243d;--muted:#61738a;--pale:#f2f7fc;--line:#e4ebf3;--shadow:0 18px 50px rgba(7,26,53,.12)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.55}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.premium-shell{overflow:hidden}
+.premium-topbar{background:#041329;color:#d8e8f8;padding:9px 5%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;letter-spacing:.02em}
+.premium-topbar a{color:#fff}
+.premium-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid #e8eef5;box-shadow:0 5px 24px rgba(7,26,53,.05)}
+.premium-navwrap{max-width:1200px;margin:auto;min-height:82px;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:22px;position:relative}
+.premium-brand{display:flex;align-items:center;gap:12px;color:var(--navy);font-weight:900;letter-spacing:.04em;line-height:1.05}
+.premium-brand img{width:62px;height:54px;object-fit:contain}
+.premium-brand span{font-size:20px}
+.premium-brand small{display:block;margin-top:5px;font-size:9px;letter-spacing:.18em;color:#62758b;font-weight:800}
+.premium-menu-btn{display:none;border:0;background:var(--navy);color:#fff;border-radius:12px;padding:10px 14px;font-size:22px;cursor:pointer}
+.premium-nav{display:flex;align-items:center;gap:20px}
+.premium-nav a{color:#31465f;font-size:13px;font-weight:750;transition:color .2s}
+.premium-nav a:hover,.premium-nav a.active{color:var(--blue)}
+.premium-nav .nav-cta{background:var(--blue);color:#fff;padding:12px 17px;border-radius:999px;box-shadow:0 8px 18px rgba(8,120,209,.2)}
+.premium-nav .nav-cta:hover{background:var(--navy);color:#fff}
+.premium-hero{position:relative;isolation:isolate;background:radial-gradient(ellipse at 78% 28%,rgba(39,184,242,.27),transparent 32%),linear-gradient(118deg,#06162d 0%,#0a2b50 55%,#075da5 100%);color:#fff;padding:76px 24px 78px}
+.premium-hero:before,.premium-hero:after{content:"";position:absolute;z-index:-1;border:1px solid rgba(255,255,255,.13);border-radius:50%;width:540px;height:540px;right:-130px;top:-190px}
+.premium-hero:after{width:700px;height:700px;right:-210px;top:-270px;border-color:rgba(255,255,255,.08)}
+.premium-hero-inner{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:45px}
+.premium-eyebrow{display:inline-flex;align-items:center;gap:9px;color:#bdeaff;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:9px 14px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.premium-eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:#62d5ff;box-shadow:0 0 12px #62d5ff}
+.premium-hero h1{font-size:clamp(38px,5.3vw,64px);line-height:1.04;letter-spacing:-.045em;margin:22px 0 17px;max-width:700px;color:#fff}
+.premium-hero h1 em{font-style:normal;color:#69d4ff}
+.premium-hero-copy{font-size:16px;line-height:1.75;color:#d3e5f5;max-width:610px;margin:0 0 25px}
+.premium-actions{display:flex;gap:12px;flex-wrap:wrap}
+.premium-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:14px 22px;font-size:14px;font-weight:850;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.premium-btn:hover{transform:translateY(-3px)}
+.premium-btn-primary{background:var(--orange);color:#111f31;box-shadow:0 12px 25px rgba(242,140,40,.23)}
+.premium-btn-primary:hover{background:#ffa646}
+.premium-btn-light{border:1px solid rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.07)}
+.premium-hero-note{margin-top:20px;color:#b7cce0;font-size:12px}
+.hero-visual{min-height:300px;display:flex;align-items:center;justify-content:center;position:relative}
+.orbit{width:min(100%,350px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(160,224,255,.28);display:flex;align-items:center;justify-content:center;position:relative;background:radial-gradient(circle,rgba(54,177,244,.19),rgba(255,255,255,.025) 55%,transparent 70%);box-shadow:inset 0 0 65px rgba(52,178,245,.13),0 0 75px rgba(39,184,242,.13)}
+.orbit:before,.orbit:after{content:"";position:absolute;inset:9%;border:1px dashed rgba(164,222,255,.28);border-radius:50%;animation:spin 32s linear infinite}
+.orbit:after{inset:20%;border-style:solid;animation-direction:reverse;animation-duration:24s}
+.signal-core{width:48%;aspect-ratio:1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(145deg,#fff,#c8edff);color:#07345c;box-shadow:0 0 0 15px rgba(255,255,255,.06),0 0 60px rgba(68,198,255,.5)}
+.signal-core strong{font-size:clamp(42px,5vw,58px);line-height:1;font-weight:950;letter-spacing:-.06em}
+.signal-core span{font-size:10px;font-weight:900;letter-spacing:.14em;margin-top:8px}
+.float-chip{position:absolute;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(12px);padding:11px 14px;border-radius:14px;color:#fff;font-size:11px;font-weight:800;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.float-chip.one{top:13%;right:-2%}.float-chip.two{bottom:13%;left:-2%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.proof{position:relative;z-index:2;max-width:1050px;margin:-28px auto 0;padding:0 20px}
+.proof-inner{background:#fff;border:1px solid #e6edf5;border-radius:18px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(3,1fr);padding:20px 12px}
+.proof-item{text-align:center;padding:4px 14px;border-right:1px solid #e9eff5}
+.proof-item:last-child{border:0}
+.proof-item strong{display:block;font-size:24px;line-height:1.15;color:var(--navy);font-weight:950}
+.proof-item span{display:block;margin-top:6px;font-size:10px;color:var(--muted);font-weight:750;letter-spacing:.06em}
+.section{padding:72px 24px}
+.section-inner{max-width:1150px;margin:auto}
+.section-head{text-align:center;max-width:760px;margin:0 auto 35px}
+.label{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+.section h2{font-size:clamp(28px,4vw,42px);line-height:1.12;letter-spacing:-.035em;color:var(--navy);margin:12px 0}
+.section-head p{color:var(--muted);font-size:14px;line-height:1.7;margin:0}
+.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.plan-card{position:relative;border:1px solid var(--line);border-radius:22px;padding:24px;background:#fff;box-shadow:0 10px 35px rgba(7,26,53,.055);transition:transform .25s,box-shadow .25s;overflow:hidden}
+.plan-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.plan-card.featured{border:2px solid var(--blue);box-shadow:0 18px 45px rgba(8,120,209,.13)}
+.plan-card.featured:before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,var(--blue),var(--cyan),var(--orange))}
+.popular{position:absolute;right:16px;top:15px;background:#e8f5ff;color:var(--blue);border-radius:999px;padding:7px 10px;font-size:9px;font-weight:950;letter-spacing:.08em}
+.plan-type{font-size:10px;font-weight:900;color:var(--blue);letter-spacing:.15em;text-transform:uppercase}
+.plan-card h3{font-size:24px;color:var(--navy);margin:10px 0 6px}
+.plan-desc{font-size:12px;color:var(--muted);line-height:1.55;min-height:38px;margin:0 0 16px}
+.monthly{font-size:11px;color:var(--muted);font-weight:750;margin-bottom:15px}
+.price-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e8eef5;border-radius:13px;overflow:hidden}
+.price-table th,.price-table td{padding:11px 9px;text-align:left;border-bottom:1px solid #edf1f6;font-size:12px}
+.price-table th{background:#f3f8fd;color:#51657d;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+.price-table tr:last-child td{border-bottom:0}
+.price-table td strong{display:block;color:var(--navy);font-size:17px;letter-spacing:-.02em}
+.price-table td small{display:block;color:#8492a3;font-size:10px;margin-top:2px}
+.combo-price{color:#0878d1!important}
+.plan-perks{list-style:none;padding:15px 0 0;margin:15px 0 0;border-top:1px solid #edf1f6}
+.plan-perks li{padding:5px 0;color:#43566d;font-size:11px}
+.plan-perks li:before{content:"✓";color:#0b9b72;font-weight:950;margin-right:8px}
+.card-cta{display:block;text-align:center;margin-top:17px;padding:12px 15px;border-radius:999px;background:var(--navy);color:#fff;font-size:12px;font-weight:850;transition:background .2s}
+.card-cta:hover{background:var(--blue)}
+.addon-band{margin-top:24px;padding:22px 25px;border:1px solid #dceaf7;border-radius:18px;background:linear-gradient(110deg,#f5faff,#fff 60%,#fff8f0);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.addon-band strong{display:block;color:var(--navy);font-size:16px}
+.addon-band p{margin:5px 0 0;color:var(--muted);font-size:12px}
+.addon-price{font-size:24px;font-weight:950;color:var(--blue);white-space:nowrap}
+.addon-price small{font-size:11px;color:var(--muted);font-weight:700}
+.feature-band{background:var(--pale)}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.feature{background:#fff;border:1px solid #e7eef6;border-radius:17px;padding:20px;min-height:160px}
+.feature-icon{width:42px;height:42px;border-radius:13px;background:#eaf5ff;color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px}
+.feature h3{font-size:15px;color:var(--navy);margin:0 0 7px}
+.feature p{font-size:11px;line-height:1.65;color:var(--muted);margin:0}
+.booking-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:start}
+.booking-card,.payment-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:27px;box-shadow:0 12px 35px rgba(7,26,53,.06)}
+.booking-card h3,.payment-card h3{font-size:21px;color:var(--navy);margin:0 0 7px}
+.booking-card>p,.payment-card>p{font-size:12px;color:var(--muted);margin:0 0 20px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:11px;font-weight:850;color:#334a64}
+.field input,.field select,.field textarea{width:100%;border:1px solid #d5e0ec;border-radius:11px;padding:12px 13px;background:#fbfdff;color:var(--ink);font-size:13px;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(8,120,209,.1)}
+.field input[readonly]{background:#f2f7fc;font-weight:900;color:var(--navy)}
+.consent{display:flex;gap:9px;align-items:flex-start;margin:16px 0;color:#5b6f84;font-size:11px;line-height:1.55}
+.consent input{margin-top:3px;accent-color:var(--blue)}
+.submit-btn{width:100%;border:0;border-radius:999px;background:var(--orange);color:#18283b;padding:15px 18px;font-size:13px;font-weight:950;cursor:pointer;box-shadow:0 10px 22px rgba(242,140,40,.2)}
+.submit-btn:hover{background:#ffa646}
+.payment-card{background:linear-gradient(145deg,#071a35,#0b3b68);color:#fff;position:sticky;top:112px}
+.payment-card h3{color:#fff}
+.payment-card>p{color:#c5d8e9}
+.payment-amount{font-size:38px;font-weight:950;letter-spacing:-.04em;color:#75d9ff;margin:15px 0}
+.upi-box{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 13px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);border-radius:12px;font-size:12px;font-weight:800}
+.copy-btn{border:0;border-radius:999px;padding:7px 11px;background:#fff;color:var(--navy);font-size:10px;font-weight:900;cursor:pointer}
+.payment-note{font-size:10px!important;line-height:1.65;color:#b8cde0!important;margin-top:15px!important}
+.steps{padding-left:18px;color:#c5d8e9;font-size:11px;line-height:1.8}
+.status{display:none;margin-top:12px;padding:11px 13px;border-radius:10px;background:#e9f8f1;color:#126b4a;font-size:12px}
+.status.show{display:block}
+.footer{background:#06172f;color:#d3e2f1;padding:52px 24px 18px}
+.footer-inner{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}
+.footer h3{color:#fff;font-size:13px;letter-spacing:.12em;margin:0 0 15px}
+.footer p,.footer a{color:#aebfd1;font-size:12px;line-height:1.8}
+.footer a{display:block;margin:7px 0}
+.footer a:hover{color:#fff}
+.footer-brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:950;font-size:19px}
+.footer-brand img{width:65px;height:55px;object-fit:contain;background:#fff;border-radius:10px}
+.copyright{max-width:1150px;margin:30px auto 0;border-top:1px solid rgba(255,255,255,.12);padding-top:17px;text-align:center;color:#8296ab;font-size:11px}
+
+.business-panel{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px;border:1px solid #dce8f4;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 16px 45px rgba(7,26,53,.08)}
+.business-intro{padding:30px;background:radial-gradient(circle at 90% 10%,rgba(39,184,242,.24),transparent 36%),linear-gradient(145deg,#071a35,#0b3b68);color:#fff;display:flex;flex-direction:column;justify-content:center}
+.business-tag{display:inline-flex;align-self:flex-start;padding:8px 11px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.09);border-radius:999px;color:#8fe0ff;font-size:10px;font-weight:900;letter-spacing:.12em}
+.business-intro h3{font-size:30px;line-height:1.1;letter-spacing:-.03em;margin:18px 0 10px;color:#fff}
+.business-intro p{font-size:13px;line-height:1.7;color:#c9dced;margin:0}
+.business-highlights{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:24px}
+.business-highlights span{font-size:11px;color:#e4f2ff;font-weight:750}
+.business-pricing{padding:25px}
+.business-price-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;color:var(--navy)}
+.business-price-heading strong{font-size:16px}
+.business-price-heading span{font-size:10px;font-weight:900;color:var(--blue);background:#eaf5ff;border-radius:999px;padding:7px 10px}
+.business-price-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 4px;border-bottom:1px solid #edf1f6}
+.business-price-row b{display:block;color:var(--navy);font-size:13px}
+.business-price-row small{display:block;color:var(--muted);font-size:10px;margin-top:2px}
+.business-price-row>strong{font-size:21px;color:var(--navy);letter-spacing:-.03em}
+.business-equipment{display:grid;grid-template-columns:1fr auto;gap:3px 12px;margin-top:16px;padding:13px 14px;background:#f2f7fc;border:1px solid #e1ebf5;border-radius:13px}
+.business-equipment span{font-size:11px;font-weight:850;color:#344b65}
+.business-equipment strong{font-size:16px;color:var(--navy)}
+.business-equipment small{grid-column:1/-1;color:#7b8da1;font-size:10px}
+.business-included{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:13px;font-size:10px;color:#52677f;font-weight:800}
+.business-included b{color:#07865e;font-size:11px}
+.business-dot{color:#a8b6c5}
+@media(max-width:760px){.business-panel{grid-template-columns:1fr}.business-intro{padding:25px}.business-pricing{padding:20px}}
+@media(max-width:420px){.business-highlights{grid-template-columns:1fr}.business-price-row>strong{font-size:19px}}
+
+@media(max-width:900px){.premium-hero-inner{grid-template-columns:1fr;gap:15px}.hero-visual{min-height:245px}.orbit{width:min(65vw,290px)}.plan-grid{grid-template-columns:1fr 1fr}.plan-card:last-child{grid-column:1/-1}.feature-grid{grid-template-columns:repeat(2,1fr)}.booking-wrap{grid-template-columns:1fr}.payment-card{position:static}.premium-nav{gap:12px}.premium-nav a{font-size:11px}}
+@media(max-width:680px){
+.premium-topbar{justify-content:center;text-align:center;font-size:10px;padding:8px 12px}
+.premium-navwrap{min-height:70px;padding:10px 16px}.premium-brand img{width:51px;height:47px}.premium-brand span{font-size:16px}
+.premium-menu-btn{display:block}.premium-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:12px 20px 20px;box-shadow:0 15px 20px rgba(7,26,53,.12);flex-direction:column;align-items:stretch;gap:0}
+.premium-nav.open{display:flex}.premium-nav a{padding:13px 5px;border-bottom:1px solid #edf1f6;font-size:14px}.premium-nav .nav-cta{text-align:center;margin-top:10px;border:0}
+.premium-hero{padding:52px 20px 62px}.premium-hero h1{font-size:41px}.premium-hero-copy{font-size:14px}.hero-visual{min-height:220px}.orbit{width:min(72vw,270px)}.float-chip{font-size:9px;padding:8px 10px}
+.proof-inner{grid-template-columns:1fr;padding:8px 14px}.proof-item{border-right:0;border-bottom:1px solid #edf1f6;padding:12px}.proof-item:last-child{border-bottom:0}
+.section{padding:58px 16px}.plan-grid{grid-template-columns:1fr}.plan-card:last-child{grid-column:auto}.plan-card{padding:21px}.feature-grid{grid-template-columns:1fr 1fr;gap:10px}.feature{padding:15px;min-height:155px}
+.booking-card,.payment-card{padding:21px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-inner{grid-template-columns:1fr;gap:22px}
+}
+@media(max-width:390px){.feature-grid{grid-template-columns:1fr}.premium-brand small{font-size:8px}.price-table th,.price-table td{padding:10px 7px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body>
+<div class="premium-shell">
+  <div class="premium-topbar">
+    <span>⌖ Ward No. 9, Bajrang Muhalla, Palera, Tikamgarh (M.P.)</span>
+    <span>☎ <a href="tel:9893705006">9893705006</a> &nbsp; | &nbsp; <a href="mailto:bajrangcableinternetservice@gmail.com">bajrangcableinternetservice@gmail.com</a></span>
+  </div>
 
-<div class="topbar">
-<span>📍 Ward No. 9, Bajrang Muhalla, Palera, Tikamgarh (M.P.)</span>
-<span>☎ 9893705006 &nbsp; | &nbsp; bajrangcableinternetservice@gmail.com</span>
+  <header class="premium-header">
+    <div class="premium-navwrap">
+      <a class="premium-brand" href="index.html">
+        <img src="logo.png" alt="Bajrang Internet Services logo" onerror="this.style.display='none'">
+        <span>BAJRANG<small>INTERNET SERVICES · PALERA</small></span>
+      </a>
+      <button class="premium-menu-btn" type="button" onclick="togglePremiumMenu()" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="premium-nav" id="premiumNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="new-connection.html">New Connection</a>
+        <a href="#business-plans">Business Plans</a>
+        <a href="renewal.html">Recharge / Renewal</a>
+        <a href="dishtv.html">DishTV</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="https://wa.me/919893705006?text=Hello%20Bajrang%20Internet%20Services%2C%20I%20want%20a%20new%20connection.">Get Connected</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="premium-hero">
+      <div class="premium-hero-inner">
+        <div>
+          <span class="premium-eyebrow">New connection offers · Palera</span>
+          <h1>Your home deserves <em>true fiber speed.</em></h1>
+          <p class="premium-hero-copy">Choose a residential or business fiber package, select your validity and enjoy high-speed connectivity. IPTV combo prices are shown as complete package totals.</p>
+          <div class="premium-actions">
+            <a class="premium-btn premium-btn-primary" href="#plans">Explore all plans <span>→</span></a>
+            <a class="premium-btn premium-btn-light" href="#booking">Book a new connection</a>
+          </div>
+          <p class="premium-hero-note">Residential: 30 / 50 / 100 Mbps &nbsp; | &nbsp; Business: 100 Mbps</p>
+        </div>
+        <div class="hero-visual" aria-label="Fiber internet speed illustration">
+          <div class="orbit">
+            <div class="signal-core"><strong>FIBER</strong><span>POWERED INTERNET</span></div>
+            <div class="float-chip one">⚡ Truly unlimited</div>
+            <div class="float-chip two">⌁ Local Palera support</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof" aria-label="Bajrang service highlights">
+      <div class="proof-inner">
+        <div class="proof-item"><strong>30–100 Mbps</strong><span>FIBER SPEED OPTIONS</span></div>
+        <div class="proof-item"><strong>Unlimited</strong><span>NO MONTHLY FUP DATA CAP</span></div>
+        <div class="proof-item"><strong>Local</strong><span>PALERA-BASED SUPPORT</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="plans">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="label">Choose your connection</span>
+          <h2>Find the right plan for your world.</h2>
+          <p>Compare all new-connection offers below. Internet-only prices and complete Internet + IPTV combo totals are shown separately for clarity.</p>
+        </div>
+
+        <div class="plan-grid">
+          <article class="plan-card featured">
+            <span class="popular">NEW IPTV COMBO OFFER</span>
+            <span class="plan-type">Entry fiber plan</span>
+            <h3>30 Mbps Fiber</h3>
+            <p class="plan-desc">Truly unlimited fiber internet for everyday browsing, study, work and entertainment.</p>
+            <div class="monthly">Choose Internet Only or Internet + IPTV Combo</div>
+            <table class="price-table">
+              <thead><tr><th>Validity</th><th>Internet only</th><th>IPTV combo total</th></tr></thead>
+              <tbody>
+                <tr><td>3 Months</td><td><strong>₹1,499</strong></td><td><strong class="combo-price">₹2,099</strong><small>Internet + IPTV</small></td></tr>
+                <tr><td>6 Months</td><td><strong>₹2,499</strong></td><td><strong class="combo-price">₹3,599</strong><small>Internet + IPTV</small></td></tr>
+                <tr><td>12 Months</td><td><strong>₹4,899</strong></td><td><strong class="combo-price">₹7,199</strong><small>Internet + IPTV</small></td></tr>
+              </tbody>
+            </table>
+            <ul class="plan-perks">
+              <li>Truly unlimited 30 Mbps fiber internet</li>
+              <li>IPTV combo includes 500+ live TV channels and OTT entertainment</li>
+              <li>Wi-Fi router free to use</li>
+              <li>Local support in Palera</li>
+            </ul>
+            <a class="card-cta" href="#booking" onclick="choosePlan('30 Mbps | 3 Months | Internet Only')">Choose 30 Mbps plan →</a>
+          </article>
+
+          <article class="plan-card">
+            <span class="plan-type">Home fiber plan</span>
+            <h3>50 Mbps Fiber</h3>
+            <p class="plan-desc">High-speed unlimited fiber internet with an optional IPTV entertainment combo for your home.</p>
+            <div class="monthly">Choose Internet Only or Internet + IPTV Combo</div>
+            <table class="price-table">
+              <thead><tr><th>Validity</th><th>Internet only</th><th>IPTV combo total</th></tr></thead>
+              <tbody>
+                <tr><td>3 Months</td><td><strong>₹1,999</strong></td><td><strong class="combo-price">₹2,599</strong><small>Internet + IPTV</small></td></tr>
+                <tr><td>6 Months</td><td><strong>₹2,999</strong></td><td><strong class="combo-price">₹4,199</strong><small>Internet + IPTV</small></td></tr>
+                <tr><td>12 Months</td><td><strong>₹5,999</strong></td><td><strong class="combo-price">₹8,399</strong><small>Internet + IPTV</small></td></tr>
+              </tbody>
+            </table>
+            <ul class="plan-perks">
+              <li>Truly unlimited 50 Mbps fiber internet</li>
+              <li>IPTV combo includes 500+ live TV channels and OTT entertainment</li>
+              <li>Wi-Fi router free to use</li>
+              <li>Local support in Palera</li>
+            </ul>
+            <a class="card-cta" href="#booking" onclick="choosePlan('50 Mbps | 3 Months | Internet Only')">Choose 50 Mbps plan →</a>
+          </article>
+
+          <article class="plan-card">
+            <span class="plan-type">High-speed fiber plan</span>
+            <h3>100 Mbps Fiber</h3>
+            <p class="plan-desc">Extra speed for connected homes, multiple devices, work, streaming and entertainment.</p>
+            <div class="monthly">Choose Internet Only or Internet + IPTV Combo</div>
+            <table class="price-table">
+              <thead><tr><th>Validity</th><th>Internet only</th><th>IPTV combo total</th></tr></thead>
+              <tbody>
+                <tr><td>3 Months</td><td><strong>₹2,499</strong></td><td><strong class="combo-price">₹3,099</strong><small>Internet + IPTV</small></td></tr>
+                <tr><td>6 Months</td><td><strong>₹4,149</strong></td><td><strong class="combo-price">₹5,349</strong><small>Internet + IPTV</small></td></tr>
+                <tr><td>12 Months</td><td><strong>₹8,249</strong></td><td><strong class="combo-price">₹10,649</strong><small>Internet + IPTV</small></td></tr>
+              </tbody>
+            </table>
+            <ul class="plan-perks">
+              <li>Truly unlimited 100 Mbps fiber internet</li>
+              <li>IPTV combo includes 500+ live TV channels and OTT entertainment</li>
+              <li>Wi-Fi router free to use</li>
+              <li>Local support in Palera</li>
+            </ul>
+            <a class="card-cta" href="#booking" onclick="choosePlan('100 Mbps | 3 Months | Internet Only')">Choose 100 Mbps plan →</a>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section" id="business-plans">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="label">Business connectivity</span>
+          <h2>Professional internet for your business.</h2>
+          <p>Dedicated 100 Mbps business fiber connection designed for consistent bandwidth, multiple users and continuous high-speed usage.</p>
+        </div>
+        <div class="business-panel">
+          <div class="business-intro">
+            <span class="business-tag">BUSINESS FIBER · 100 Mbps</span>
+            <h3>Keep your business connected.</h3>
+            <p>Symmetric constant bandwidth for offices, shops, work teams, cloud applications and business-critical connectivity.</p>
+            <div class="business-highlights">
+              <span>✓ Symmetric bandwidth</span>
+              <span>✓ Multiple-user support</span>
+              <span>✓ Stable network performance</span>
+              <span>✓ Lifetime support & service free</span>
+            </div>
+          </div>
+          <div class="business-pricing">
+            <div class="business-price-heading"><strong>Business new connection packages</strong><span>100 Mbps</span></div>
+            <div class="business-price-row"><div><b>3 Months</b><small>Business fiber package</small></div><strong>₹7,599</strong></div>
+            <div class="business-price-row"><div><b>6 Months</b><small>Business fiber package</small></div><strong>₹11,799</strong></div>
+            <div class="business-price-row"><div><b>9 Months</b><small>Business fiber package</small></div><strong>₹15,999</strong></div>
+            <div class="business-price-row"><div><b>12 Months</b><small>Business fiber package</small></div><strong>₹20,299</strong></div>
+            <div class="business-equipment"><span>Dual-band ONT equipment</span><strong>₹3,299</strong><small>Included in the package totals above · chargeable equipment</small></div>
+            <div class="business-included"><span>Installation</span><b>FREE</b><span class="business-dot">•</span><span>Lifetime support & service</span><b>FREE</b></div>
+            <a class="card-cta" href="#booking" onclick="choosePlan('100 Mbps Business|3 Months|7599')">Enquire for Business Connection →</a>
+          </div>
+        </div>
+        <p style="text-align:center;color:#7a8a9b;font-size:11px;margin:17px 0 0">Business package totals include the ₹3,299 dual-band ONT charge. Installation is free. Business packages are separate from residential offers.</p>
+      </div>
+    </section>
+
+    <section class="section feature-band">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="label">The Bajrang advantage</span>
+          <h2>Internet that keeps life moving.</h2>
+          <p>Fiber-based connectivity with a local team that understands Palera.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature"><div class="feature-icon">⚡</div><h3>High-speed Fiber</h3><p>Fiber optic broadband for smooth browsing, streaming and online work.</p></article>
+          <article class="feature"><div class="feature-icon">∞</div><h3>Truly Unlimited</h3><p>Enjoy unlimited data without a monthly FUP data cap.</p></article>
+          <article class="feature"><div class="feature-icon">▣</div><h3>Internet + Entertainment</h3><p>Choose IPTV combo entertainment with selected new-connection offers.</p></article>
+          <article class="feature"><div class="feature-icon">⌖</div><h3>Local Support</h3><p>Get internet-related assistance directly from your local Palera provider.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="booking">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="label">Get connected</span>
+          <h2>Book your new fiber connection.</h2>
+          <p>Enter your details and select a package. Your selected offer price will be filled automatically.</p>
+        </div>
+
+        <div class="booking-wrap">
+          <div class="booking-card">
+            <h3>Connection & installation details</h3>
+            <p>Fields marked * are required. Please provide accurate contact details.</p>
+            <form id="bookingForm" onsubmit="premiumBookConnection(event)">
+              <div class="form-grid">
+                <div class="field"><label for="customerName">Customer full name *</label><input id="customerName" name="name" required maxlength="70" placeholder="Your full name"></div>
+                <div class="field"><label for="customerMobile">Mobile number *</label><input id="customerMobile" name="mobile" required inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10-digit mobile number"></div>
+                <div class="field full"><label for="customerAddress">Installation address *</label><textarea id="customerAddress" name="address" required rows="2" placeholder="House / street / ward / locality, Palera"></textarea></div>
+                <div class="field"><label for="selectedPlan">Select speed & validity *</label>
+                  <select id="selectedPlan" name="plan" required onchange="updateSelectedAmount()">
+                    <option value="" data-amount="">Choose a package</option>
+                    <optgroup label="30 Mbps — Internet Only">
+                      <option value="30 Mbps | 3 Months | Internet Only" data-amount="1499">3 Months — ₹1,499</option>
+                      <option value="30 Mbps | 6 Months | Internet Only" data-amount="2499">6 Months — ₹2,499</option>
+                      <option value="30 Mbps | 12 Months | Internet Only" data-amount="4899">12 Months — ₹4,899</option>
+                    </optgroup>
+                    <optgroup label="30 Mbps — Internet + IPTV Combo">
+                      <option value="30 Mbps | 3 Months | IPTV Combo" data-amount="2099">3 Months — ₹2,099</option>
+                      <option value="30 Mbps | 6 Months | IPTV Combo" data-amount="3599">6 Months — ₹3,599</option>
+                      <option value="30 Mbps | 12 Months | IPTV Combo" data-amount="7199">12 Months — ₹7,199</option>
+                    </optgroup>
+                    <optgroup label="50 Mbps — Internet Only">
+                      <option value="50 Mbps | 3 Months | Internet Only" data-amount="1999">3 Months — ₹1,999</option>
+                      <option value="50 Mbps | 6 Months | Internet Only" data-amount="2999">6 Months — ₹2,999</option>
+                      <option value="50 Mbps | 12 Months | Internet Only" data-amount="5999">12 Months — ₹5,999</option>
+                    </optgroup>
+                    <optgroup label="50 Mbps — Internet + IPTV Combo">
+                      <option value="50 Mbps | 3 Months | IPTV Combo" data-amount="2599">3 Months — ₹2,599</option>
+                      <option value="50 Mbps | 6 Months | IPTV Combo" data-amount="4199">6 Months — ₹4,199</option>
+                      <option value="50 Mbps | 12 Months | IPTV Combo" data-amount="8399">12 Months — ₹8,399</option>
+                    </optgroup>
+                    <optgroup label="100 Mbps — Internet Only">
+                      <option value="100 Mbps | 3 Months | Internet Only" data-amount="2499">3 Months — ₹2,499</option>
+                      <option value="100 Mbps | 6 Months | Internet Only" data-amount="4149">6 Months — ₹4,149</option>
+                      <option value="100 Mbps | 12 Months | Internet Only" data-amount="8249">12 Months — ₹8,249</option>
+                    </optgroup>
+                    <optgroup label="100 Mbps — Internet + IPTV Combo">
+                      <option value="100 Mbps | 3 Months | IPTV Combo" data-amount="3099">3 Months — ₹3,099</option>
+                      <option value="100 Mbps | 6 Months | IPTV Combo" data-amount="5349">6 Months — ₹5,349</option>
+                      <option value="100 Mbps | 12 Months | IPTV Combo" data-amount="10649">12 Months — ₹10,649</option>
+                    </optgroup>
+
+                    <optgroup label="100 Mbps — Business Fiber">
+                      <option value="100 Mbps Business | 3 Months" data-amount="7599">3 Months — ₹7,599 (ONT included)</option>
+                      <option value="100 Mbps Business | 6 Months" data-amount="11799">6 Months — ₹11,799 (ONT included)</option>
+                      <option value="100 Mbps Business | 9 Months" data-amount="15999">9 Months — ₹15,999 (ONT included)</option>
+                      <option value="100 Mbps Business | 12 Months" data-amount="20299">12 Months — ₹20,299 (ONT included)</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="field"><label for="bookingAmount">Payment amount (₹)</label><input id="bookingAmount" name="amount" readonly required placeholder="Auto-filled from package"></div>
+                <div class="field full"><label for="bookingNotes">Additional instructions (optional)</label><textarea id="bookingNotes" name="notes" rows="2" placeholder="Landmark or preferred installation time"></textarea></div>
+              </div>
+              <label class="consent"><input id="bookingConsent" type="checkbox" required><span>I agree that Bajrang Internet Services may contact me about this connection request. I understand the booking is confirmed only after payment and details are verified.</span></label>
+              <button class="submit-btn" type="submit">Continue to UPI Payment & WhatsApp Booking →</button>
+              <div class="status" id="bookingStatus" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+          <aside class="payment-card">
+            <h3>Secure UPI payment</h3>
+            <p>Your selected plan amount appears here. Pay using your preferred UPI app.</p>
+            <div class="payment-amount" id="paymentAmount">₹0</div>
+            <div class="upi-box"><span id="upiText">dharmend13@ibl</span><button class="copy-btn" type="button" onclick="copyUPI()">Copy UPI ID</button></div>
+            <ol class="steps">
+              <li>Fill in your name, mobile number and installation address.</li>
+              <li>Select the speed, validity and package type.</li>
+              <li>Continue to open your UPI app and complete payment.</li>
+              <li>Send the prepared booking details on WhatsApp after payment.</li>
+            </ol>
+            <p class="payment-note">This website does not collect your UPI PIN or banking password. Payment is confirmed only after Bajrang verifies the transaction. If your UPI app does not open automatically, contact us on WhatsApp.</p>
+            <a class="premium-btn premium-btn-light" style="width:100%;margin-top:8px" href="https://wa.me/919893705006?text=Hello%20Bajrang%20Internet%20Services%2C%20I%20need%20help%20with%20a%20new%20connection.">Need help? WhatsApp us</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand"><img src="logo.png" alt="Bajrang logo" onerror="this.style.display='none'"><span>BAJRANG<br><small style="font-size:9px;letter-spacing:.16em">INTERNET SERVICES · PALERA</small></span></div>
+        <p>High Speed Unlimited Fiber Internet Services. Your local destination for broadband, entertainment and networking solutions.</p>
+      </div>
+      <div>
+        <h3>QUICK LINKS</h3>
+        <a href="index.html">Home</a><a href="new-connection.html">New Connection</a><a href="renewal.html">Recharge / Renewal</a><a href="dishtv.html">DishTV</a><a href="services.html">Our Services</a><a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>CONTACT US</h3>
+        <a href="tel:9893705006">☎ 9893705006</a>
+        <a href="https://wa.me/919893705006">WhatsApp Bajrang</a>
+        <a href="mailto:bajrangcableinternetservice@gmail.com">bajrangcableinternetservice@gmail.com</a>
+        <p>Ward No. 9, Bajrang Muhalla,<br>Palera, Tikamgarh (M.P.)</p>
+      </div>
+    </div>
+    <div class="copyright">© Bajrang Internet Services, Palera. All rights reserved.</div>
+  </footer>
 </div>
 
-<header>
-<div class="navwrap">
-<a class="brand" href="index.html">
-<img src="logo.png" alt="Bajrang logo" onerror="this.style.display='none'">
-<span>BAJRANG <small>INTERNET SERVICES · PALERA</small></span>
-</a>
-<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
-<nav>
-<a href="index.html">Home</a>
-<a href="new-connection.html">New Connection</a>
-<a href="renewal.html">Recharge / Renewal</a>
-<a href="dishtv.html">DishTV</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
-</nav>
-</div>
-</header>
-
-<main class="container">
-
-<h2>New Fiber Connection Plans</h2>
-<p class="section-intro">These are new-connection offer prices only. Existing customer renewal prices are on a separate page.</p>
-
-<div class="grid two">
-
-<div class="card">
-<span class="tag">50 Mbps · UNLIMITED DATA</span>
-<h3>50 Mbps Fiber Broadband</h3>
-<p>New connection offer</p>
-<div class="price">₹1,999 <small>/ 3 months</small></div>
-<ul class="features">
-<li>6 months: ₹2,999</li>
-<li>1 year: ₹5,999</li>
-<li>Router free to use</li>
-<li>350+ free Live TV channels</li>
-<li>Installation free during offer</li>
-</ul>
-</div>
-
-<div class="card">
-<span class="tag">100 Mbps · UNLIMITED DATA</span>
-<h3>100 Mbps Fiber Broadband</h3>
-<p>New connection offer</p>
-<div class="price">₹2,499 <small>/ 3 months</small></div>
-<ul class="features">
-<li>6 months: ₹4,149</li>
-<li>1 year: ₹8,249</li>
-<li>Router free to use</li>
-<li>350+ free Live TV channels</li>
-<li>Installation free during offer</li>
-</ul>
-</div>
-
-</div>
-
-<!-- BUSINESS BROADBAND -->
-<div class="spacer"></div>
-
-<h2>Business Broadband Connection</h2>
-<p class="section-intro">Premium 100 Mbps business fiber broadband for commercial connections, multiple users and continuous high-speed usage.</p>
-
-<div class="grid two">
-
-<div class="card">
-<span class="tag">100 Mbps · BUSINESS BROADBAND</span>
-<h3>Business Fiber Broadband</h3>
-<p>High-performance business connectivity</p>
-<div class="price">₹7,599 <small>/ 3 months</small></div>
-<ul class="features">
-<li>6 months: ₹11,799</li>
-<li>9 months: ₹15,999</li>
-<li>12 months: ₹20,299</li>
-<li>₹3,299 dual-band ONT charge included in total</li>
-<li>Installation free</li>
-</ul>
-</div>
-
-<div class="card">
-<span class="tag">BUSINESS CONNECTIVITY FEATURES</span>
-<h3>Built for Business</h3>
-<ul class="features">
-<li>100 Mbps symmetric bandwidth</li>
-<li>Constant dedicated bandwidth</li>
-<li>Multiple users and devices connectivity</li>
-<li>Zero network fluctuation</li>
-<li>Suitable for continuous high-speed bandwidth consumption</li>
-<li>Free lifetime support and service</li>
-</ul>
-</div>
-
-</div>
-
-<div class="notice">
-<strong>Business Broadband Equipment & Installation:</strong>
-Dual-band ONT is chargeable at ₹3,299 and its cost is already included in the displayed package totals. Installation charges are free.
-</div>
-
-<div class="spacer"></div>
-
-<h2>Book your new connection</h2>
-<p class="section-intro">Submit your details, choose the plan and continue to UPI payment.</p>
-
-<form class="form" onsubmit="event.preventDefault();bookConnection(this)">
-<div class="form-grid">
-
-<div class="field">
-<label>Customer full name *</label>
-<input name="name" required placeholder="Your name">
-</div>
-
-<div class="field">
-<label>Mobile number *</label>
-<input name="mobile" required inputmode="numeric" maxlength="10" placeholder="10-digit mobile number">
-</div>
-
-<div class="field full">
-<label>Installation address *</label>
-<textarea name="address" required rows="2" placeholder="House / street / ward / area in Palera"></textarea>
-</div>
-
-<div class="field">
-<label>Select speed and validity *</label>
-<select name="plan" required data-amount-select>
-
-<option value="">Choose a plan</option>
-
-<optgroup label="50 Mbps - Residential Broadband">
-<option data-amount="1999" value="50 Mbps - 3 months">50 Mbps · 3 months · ₹1,999</option>
-<option data-amount="2999" value="50 Mbps - 6 months">50 Mbps · 6 months · ₹2,999</option>
-<option data-amount="5999" value="50 Mbps - 1 year">50 Mbps · 1 year · ₹5,999</option>
-</optgroup>
-
-<optgroup label="100 Mbps - Residential Broadband">
-<option data-amount="2499" value="100 Mbps - 3 months">100 Mbps · 3 months · ₹2,499</option>
-<option data-amount="4149" value="100 Mbps - 6 months">100 Mbps · 6 months · ₹4,149</option>
-<option data-amount="8249" value="100 Mbps - 1 year">100 Mbps · 1 year · ₹8,249</option>
-</optgroup>
-
-<optgroup label="Business Broadband - 100 Mbps">
-<option data-amount="7599" value="Business Broadband 100 Mbps - 3 months - Dual Band ONT included">3 Months · ₹7,599</option>
-<option data-amount="11799" value="Business Broadband 100 Mbps - 6 months - Dual Band ONT included">6 Months · ₹11,799</option>
-<option data-amount="15999" value="Business Broadband 100 Mbps - 9 months - Dual Band ONT included">9 Months · ₹15,999</option>
-<option data-amount="20299" value="Business Broadband 100 Mbps - 12 months - Dual Band ONT included">12 Months · ₹20,299</option>
-</optgroup>
-
-</select>
-</div>
-
-<div class="field">
-<label>Payment amount (₹)</label>
-<input name="amount" readonly required placeholder="Auto-filled from plan">
-</div>
-
-<div class="field full">
-<label>Additional instructions (optional)</label>
-<textarea name="notes" rows="2" placeholder="Landmark or preferred installation time"></textarea>
-</div>
-
-<div class="field full">
-<button class="btn" type="submit">Continue to UPI Payment & Booking</button>
-</div>
-
-</div>
-</form>
-
-<div class="notice">
-Payment is made to UPI ID <strong>dharmend13@ibl</strong>.
-UPI app opening depends on the device. After paying, send the booking details on WhatsApp. Connection booking and installation timing are confirmed by our team after checking your request.
-</div>
-
-</main>
-
-<footer>
-<div class="footer-inner">
-
-<div>
-<h3>BAJRANG INTERNET SERVICES</h3>
-<p>High Speed Unlimited Fiber Internet Services · Palera</p>
-<p>Complete Internet & Networking Solution</p>
-</div>
-
-<div>
-<h3>Quick Links</h3>
-<a href="new-connection.html">New connection booking</a>
-<a href="renewal.html">Existing customer renewal</a>
-<a href="dishtv.html">DishTV plans</a>
-<a href="services.html">Our services</a>
-</div>
-
-<div>
-<h3>Contact</h3>
-<a href="tel:9893705006">9893705006</a>
-<a href="mailto:bajrangcableinternetservice@gmail.com">Email us</a>
-<a href="https://wa.me/919893705006">WhatsApp us</a>
-<p>Ward No. 9, Bajrang Muhalla, Palera, Tikamgarh (M.P.)</p>
-</div>
-
-</div>
-<div class="copyright">© Bajrang Internet Services, Palera. All rights reserved.</div>
-</footer>
-
+<script>
+function togglePremiumMenu(){
+  const nav=document.getElementById("premiumNav");
+  const button=document.querySelector(".premium-menu-btn");
+  const isOpen=nav.classList.toggle("open");
+  button.setAttribute("aria-expanded",String(isOpen));
+}
+function updateSelectedAmount(){
+  const select=document.getElementById("selectedPlan");
+  const option=select.options[select.selectedIndex];
+  const amount=option ? Number(option.dataset.amount||0) : 0;
+  document.getElementById("bookingAmount").value=amount?String(amount):"";
+  document.getElementById("paymentAmount").textContent=amount?"₹"+amount.toLocaleString("en-IN"):"₹0";
+}
+function choosePlan(value){
+  const select=document.getElementById("selectedPlan");
+  const match=[...select.options].find(option=>option.value===value);
+  if(match){select.value=value;updateSelectedAmount();}
+}
+function copyUPI(){
+  const upi="dharmend13@ibl";
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(upi).then(()=>alert("UPI ID copied: "+upi)).catch(()=>prompt("Copy UPI ID:",upi));
+  }else{prompt("Copy UPI ID:",upi);}
+}
+function premiumBookConnection(event){
+  event.preventDefault();
+  const form=document.getElementById("bookingForm");
+  const data=new FormData(form);
+  const name=String(data.get("name")||"").trim();
+  const mobile=String(data.get("mobile")||"").trim();
+  const address=String(data.get("address")||"").trim();
+  const plan=String(data.get("plan")||"").trim();
+  const amount=Number(data.get("amount")||0);
+  const notes=String(data.get("notes")||"").trim();
+  if(!name||!mobile||!address||!plan||!amount){alert("Please complete all required fields and select a package.");return;}
+  if(!/^[6-9][0-9]{9}$/.test(mobile)){alert("Please enter a valid 10-digit Indian mobile number.");return;}
+  if(!document.getElementById("bookingConsent").checked){alert("Please accept the contact consent to continue.");return;}
+  const amountText="₹"+amount.toLocaleString("en-IN");
+  const message="NEW CONNECTION BOOKING\nName: "+name+"\nMobile: "+mobile+"\nAddress: "+address+"\nSelected package: "+plan+"\nAmount: "+amountText+(notes?"\nAdditional instructions: "+notes:"")+"\nPlease verify payment and confirm installation.";
+  const upiUrl="upi://pay?pa="+encodeURIComponent("dharmend13@ibl")+"&pn="+encodeURIComponent("Bajrang Internet Services")+"&am="+encodeURIComponent(amount.toFixed(2))+"&cu=INR&tn="+encodeURIComponent("New connection - "+mobile);
+  const whatsappUrl="https://wa.me/919893705006?text="+encodeURIComponent(message);
+  sessionStorage.setItem("pendingBooking",message);
+  const proceed=confirm("Your selected package amount is "+amountText+". Press OK to open your UPI app. After completing payment, send the prepared booking details on WhatsApp.");
+  if(!proceed)return;
+  const paymentTab=window.open(upiUrl,"_blank");
+  if(!paymentTab){window.location.href=upiUrl;}
+  window.setTimeout(()=>{window.open(whatsappUrl,"_blank");},900);
+  document.getElementById("bookingStatus").textContent="Your booking details are ready. Complete the UPI payment, then send the WhatsApp message to Bajrang.";
+  document.getElementById("bookingStatus").classList.add("show");
+}
+document.getElementById("selectedPlan").addEventListener("change",updateSelectedAmount);
+</script>
 </body>
 </html>
+
