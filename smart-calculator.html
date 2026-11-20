@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071a35">
+<meta name="description" content="Build your own Bajrang Internet broadband and entertainment package with our Smart Recharge Calculator.">
+<title>Smart Recharge Calculator | Bajrang Internet Services</title>
+<link rel="stylesheet" href="style.css">
+<style>
+:root{--sn:#071a35;--sb:#0878d1;--so:#f28c28;--sm:#61738a;--sl:#e4ebf3}
+body{background:#f4f8fc;color:#10243d}.calc-hero{background:radial-gradient(ellipse at 80% 20%,#1c6e9c 0,transparent 35%),linear-gradient(120deg,#06162d,#0b2b50 60%,#075da5);color:#fff;padding:54px 20px}.calc-hero>div{max-width:1100px;margin:auto}.eyebrow{color:#8fe0ff;font-size:11px;font-weight:900;letter-spacing:.18em}.calc-hero h1{font-size:clamp(32px,5vw,52px);line-height:1.08;margin:12px 0;color:#fff}.calc-hero p{color:#d2e5f5;max-width:680px;margin:0;line-height:1.7}.calc-wrap{max-width:1100px;margin:30px auto;padding:0 18px 55px}.calc-layout{display:grid;grid-template-columns:1fr;gap:22px;align-items:start}.calc-panel,.summary{background:#fff;border:1px solid var(--sl);border-radius:20px;box-shadow:0 12px 35px #071a3509}.calc-panel{padding:25px;margin-bottom:18px}.calc-panel h2{font-size:21px;color:var(--sn);margin:0 0 5px}.sub{color:var(--sm);font-size:13px;margin:0 0 20px}.field-label{display:block;color:#304761;font-size:12px;font-weight:850;margin:0 0 8px}.calc-select,.calc-input{width:100%;border:1px solid #d5e0ec;border-radius:11px;padding:13px;background:#fbfdff;color:#10243d;font:inherit}.speed-grid,.duration-grid,.device-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.choice{position:relative}.choice input{position:absolute;opacity:0;pointer-events:none}.choice label{display:block;border:1px solid #dce6f0;border-radius:13px;padding:13px;text-align:center;cursor:pointer;background:#fff}.choice input:checked+label{border:2px solid var(--sb);background:#eef8ff;box-shadow:0 5px 15px #0878d11c}.choice strong{display:block;color:var(--sn);font-size:15px}.choice small{display:block;color:var(--sm);font-size:11px;margin-top:3px}.calc-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.addon-card{border:1px solid #e3eaf2;border-radius:15px;padding:16px;margin-top:13px}.addon-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.addon-head h3{font-size:16px;color:var(--sn);margin:0}.price-tag{font-size:14px;font-weight:950;color:var(--sb);white-space:nowrap}.brand
+-logos{display:flex;flex-wrap:wrap;gap:8px;margin:13px 0}.brand-logo{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:9px;background:#f2f6fb;border:1px solid #e7edf4;font-size:11px;font-weight:900;color:#243b56}.brand-logo i{display:inline-grid;place-items:center;width:21px;height:21px;border-radius:6px;background:#fff;color:#0878d1;font-style:normal;font-size:10px}.brand-logo.hot i{color:#e13c59}.brand-logo.sony i{color:#6b45b7}.brand-logo.zee i{color:#8b4bd3}.brand-logo.fan i{color:#ed6b2e}.brand-logo.prime i{color:#0878d1}.device-grid{grid-template-columns:repeat(3,1fr)}.device-choice{border:1px solid #dce6f0;border-radius:12px;padding:12px;cursor:pointer}.device-choice:has(input:checked){border:2px solid var(--sb);background:#eef8ff}.device-choice input{accent-color:var(--sb)}.device-choice b{display:block;color:var(--sn);font-size:13px}.device-choice small{color:var(--sm);font-size:11px}.summary{position:static;order:initial;padding:24px;background:linear-gradient(155deg,#071a35,#0b3b68);color:#fff}.summary h2{font-size:20px;color:#fff;margin:0 0 5px}.summary .sub{color:#c3d8ea}.summary-line{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #ffffff20;font-size:12px;color:#d6e7f5}.summary-line strong{color:#fff;text-align:right}.total{display:flex;justify-content:space-between;align-items:center;padding:18px 0 12px;font-size:13px;font-weight:800}.total strong{font-size:30px;color:#75d9ff;letter-spacing:-.04em}.pay-area{border-top:1px solid #ffffff25;margin-top:12px;padding-top:17px}.pay-area label{display:block;color:#e4f1fb;font-size:12px;font-weight:800;margin-bottom:7px}.pay-area input{width:100%;border:1px solid #8ba8c4;background:#fff;border-radius:10px;padding:13px;font:inherit}.pay-btn{width:100%;border:0;border-radius:999px;background:var(--so);color:#15253a;font-weight:950;padding:14px;margin-top:12px;cursor:pointer}.pay-btn:hover{background:#ffa646}.pay-note{font-size:10px;line-height:1.6;color:#b9cde0;margin:12px 0 0}.included{bo
+rder:1px solid #cfe8dd;background:#f1fbf6;border-radius:12px;padding:12px;color:#176548;font-size:12px;margin-top:12px}.muted-note{font-size:11px;color:var(--sm);line-height:1.6;margin:12px 0 0}.footer-mini{text-align:center;color:#74859a;font-size:11px;padding:24px}
+@media(max-width:820px){.calc-layout{grid-template-columns:1fr}.summary{position:static;order:initial}.calc-wrap{margin-top:18px}}
+@media(max-width:520px){.calc-panel{padding:18px}.speed-grid,.duration-grid{grid-template-columns:1fr 1fr}.device-grid{grid-template-columns:1fr}.calc-row{grid-template-columns:1fr}.calc-hero{padding:42px 18px}.addon-head{align-items:flex-start}.summary{padding:20px}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>📍 Palera, Tikamgarh (M.P.)</span><span>☎ <a href="tel:9893705006">9893705006</a></span></div>
+<header><div class="navwrap">
+<a class="brand" href="index.html"><img src="logo.png" alt="Bajrang logo" onerror="this.style.display='none'"><span>BAJRANG <small>INTERNET SERVICES · PALERA</small></span></a>
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+<nav><a href="index.html">Home</a><a href="new-connection.html">New Connection</a><a href="renewal.html">Recharge / Renewal</a><a href="smart-calculator.html" class="active">Smart Calculator</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav>
+</div></header>
+<section class="calc-hero"><div><span class="eyebrow">BUILD YOUR OWN PACKAGE</span><h1>Smart Recharge Calculator</h1><p>Choose your broadband plan, add entertainment services only if you need them, and see your complete package price instantly.</p></div></section>
+<main class="calc-wrap"><div class="calc-layout"><div>
+<section class="calc-panel">
+<h2>01. Choose your broadband plan</h2><p class="sub">Choose your speed and validity. Broadband is calculated using the monthly renewal price; combo offers are applied automatically where eligible.</p>
+<div class="field-label">Select broadband speed</div>
+<div class="speed-grid">
+<div class="choice"><input type="radio" name="speed" id="s30" value="30" checked><label for="s30"><strong>30 Mbps</strong><small>₹412 / month</small></label></div>
+<div class="choice"><input type="radio" name="speed" id="s50" value="50"><label for="s50"><strong>50 Mbps</strong><small>₹599 / month</small></label></div>
+<div class="choice"><input type="radio" name="speed" id="s100" value="100"><label for="s100"><strong>100 Mbps</strong><small>₹824 / month</small></label></div>
+</div>
+<div class="field-label" style="margin-top:19px">Select broadband validity</div>
+<div class="duration-grid">
+<div class="choice"><input type="radio" name="validity" id="v1" value="1" checked><label for="v1"><strong>1 Month</strong><small>Monthly price</small></label></div>
+<div class="choice"><input type="radio" name="validity" id="v3" value="3"><label for="v3"><strong>3 Months</strong><small>₹100 off on combo</small></label></div>
+<div class="choice"><input type="radio" name="validity" id="v6" value="6"><label for="v6"><strong>6 + 1 Months</strong><small>1 month extra free</small></label></div>
+<div class="choice"><input type="radio" name="validity" id="v12" value="12"><label for="v12"><strong>12 + 2 Months</strong><small>2 months extra free</small></label></div>
+</div></section>
+<section class="calc-panel">
+<h2>02. Choose OTT entertainment (optional)</h2><p class="sub">Select an OTT plan and choose its duration independently from your broadband validity.</p>
+<div class="addon-card"><div class="addon-head"><h3>OTT Plan 1</h3><span class="price-tag">₹199 / month</span></div>
+<p class="muted-note">Includes access to the following OTT platforms:</p>
+<div class="brand-logos"><span class="brand-logo hot"><i>JH</i>JioHotstar</span><span class="brand-logo sony"><i>S</i>SonyLIV</span><span class="brand-logo zee"><i>Z</i>ZEE5</span><span class="brand-logo fan"><i>F</i>FanCode</span><span class="brand-logo"><i>+</i>16+ OTTs</span></div>
+<label class="field-label"><input type="radio" name="ott" value="0" checked> No OTT plan</label><label class="field-label"><input type="radio" name="ott" value="199"> Select OTT Plan 1</label></div>
+<div class="addon-card"><div class="addon-head"><h3>OTT Plan 2</h3><span class="price-tag">₹249 / month</span></div>
+<p class="muted-note">Everything included in OTT Plan 1, plus Prime Video Lite for 1 month.</p>
+<div class="brand-logos"><span class="brand-logo hot"><i>JH</i>JioHotstar</span><span class="brand-logo sony"><i>S</i>SonyLIV</span><span class="brand-logo zee"><i>Z</i>ZEE5</span><span class="brand-logo fan"><i>F</i>FanCode</span><span class="brand-logo"><i>+</i>16+ OTTs</span><span class="brand-logo prime"><i>P</i>Prime Video Lite</span></div>
+<label class="field-label"><input type="radio" name="ott" value="249"> Select OTT Plan 2</label></div>
+<div class="calc-row" style="margin-top:15px"><div><label class="field-label" for="ottMonths">OTT duration</label><select id="ottMonths" class="calc-select"><option value="1">1 Month</option><option value="2">2 Months</option><option value="3">3 Months</option><option value="4">4 Months</option><option value="5">5 Months</option><option value="6">6 Months</option><option value="9">9 Months</option><option value="12">12 Months</option></select></div><div><label class="field-label">OTT amount</label><input class="calc-input" id="ottAmount" readonly value="₹0"></div></div>
+<p class="muted-note">Plan 2 includes Prime Video Lite for the selected subscription month(s), subject to the provider's subscription terms.</p>
+</section>
+<section class="calc-panel">
+<h2>03. Add IPTV / Live TV (optional)</h2><p class="sub">500+ channels. Choose the number of devices and duration independently.</p>
+<div class="device-grid">
+<label class="device-choice"><input type="radio" name="iptv" value="0" checked><b>No paid IPTV</b><small>Skip this add-on</small></label>
+<label class="device-choice"><input type="radio" name="iptv" value="199"><b>1 Device · ₹199/month</b><small>500+ channels</small></label>
+<label class="device-choice"><input type="radio" name="iptv" value="249"><b>2 Devices · ₹249/month</b><small>500+ channels</small></label>
+</div>
+<div class="calc-row" style="margin-top:15px"><div><label class="field-label" for="iptvMonths">IPTV duration</label><select id="iptvMonths" class="calc-select"><option value="1">1 Month</option><option value="2">2 Months</option><option value="3">3 Months</option><option value="4">4 Months</option><option value="5">5 Months</option><option value="6">6 Months</option><option value="9">9 Months</option><option value="12">12 Months</option></select></div><div><label class="field-label">IPTV amount</label><input class="calc-input" id="iptvAmount" readonly value="₹0"></div></div>
+<div class="included"><strong>Included with your broadband:</strong> 350+ free live TV channels at no extra charge, subject to supported device/app availability.</div>
+</section>
+<aside class="summary"><h2>Your package summary</h2><p class="sub">Your selections and calculated amount</p>
+<div class="summary-line"><span>Broadband</span><strong id="sumBroadband">30 Mbps · 1 Month</strong></div>
+<div class="summary-line"><span>Broadband price</span><strong id="sumBase">₹412</strong></div>
+<div class="summary-line"><span>Validity offer / discount</span><strong id="sumOffer">No validity offer</strong></div>
+<div class="summary-line"><span>OTT selection</span><strong id="sumOtt">None · ₹0</strong></div>
+<div class="summary-line"><span>IPTV selection</span><strong id="sumIptv">None · ₹0</strong></div>
+<div class="summary-line"><span>Free TV channels</span><strong>350+ · Included</strong></div>
+<div class="total"><span>Total payable</span><strong id="grandTotal">₹412</strong></div>
+<div class="pay-area"><label for="registeredMobile">Registered mobile number</label><input id="registeredMobile" type="tel" inputmode="numeric" maxlength="10" placeholder="Enter 10-digit registered number" autocomplete="tel">
+<button class="pay-btn" type="button" onclick="payCustomPlan()">Pay Now →</button>
+<p class="pay-note">Payment is made through UPI. Your selected package and add-ons are activated after our team verifies the payment and matches the registered mobile number.</p></div></aside>
+</div></div></main>
+<div class="footer-mini">© Bajrang Internet Services, Palera · <a href="https://wa.me/919893705006">Need help? WhatsApp us</a></div>
+<script src="script.js"></script>
+<script>
+(function(){
+const monthlyPrices={30:412,50:599,100:824};
+const $=id=>document.getElementById(id),money=n=>'₹'+Number(n).toLocaleString('en-IN');
+function selected(name){return document.querySelector('input[name="'+name+'"]:checked')?.value||'0'}
+function calculate(){
+ const speed=selected('speed'),validity=Number(selected('validity')),monthly=monthlyPrices[speed];
+ const or=Number(selected('ott')),om=Number($('ottMonths').value),ir=Number(selected('iptv')),im=Number($('iptvMonths').value);
+ const oa=or*om,ia=ir*im,combo=(or>0||ir>0);
+ const bothAddons=(or>0&&ir>0);
+ const discount=bothAddons?(validity===1?50:(validity===3?150:0)):((validity===3&&combo)?100:0),base=monthly*validity-discount;
+ const extraMonths=validity===6?1:(validity===12?2:0),total=base+oa+ia;
+ $('ottAmount').value=money(oa);$('iptvAmount').value=money(ia);
+ $('sumBroadband').textContent=speed+' Mbps · '+(validity===6?'6 + 1 Months':validity===12?'12 + 2 Months':validity+' Month'+(validity===1?'':'s'));$('sumBase').textContent=money(base)+' ('+money(monthly)+' × '+validity+' months)';
+ $('sumOtt').textContent=or===0?'None · ₹0':(or===199?'Plan 1':'Plan 2')+' · '+om+' mo · '+money(oa);
+ $('sumIptv').textContent=ir===0?'None · ₹0':(ir===199?'1 Device':'2 Devices')+' · '+im+' mo · '+money(ia);
+ $('grandTotal').textContent=money(total);
+ $('sumOffer').textContent=validity===1&&bothAddons?'₹50 off for OTT + IPTV combo':validity===3&&bothAddons?'₹150 off for OTT + IPTV combo':validity===3&&combo?'₹100 combo discount applied':validity===3?'₹100 discount available with OTT/IPTV combo':validity===6?'1 extra broadband month free (7 months total)':validity===12?'2 extra broadband months free (14 months total)':'No validity offer';
+ window.currentCustomPlan={speed,validity,monthly,base,discount,extraMonths,bothAddons,ottRate:or,ottMonths:om,ott:oa,iptvRate:ir,iptvMonths:im,iptv:ia,total};
+}
+window.payCustomPlan=function(){
+ const mobile=$('registeredMobile').value.trim();
+ if(!/^[6-9]\d{9}$/.test(mobile)){alert('Please enter a valid 10-digit registered Indian mobile number.');$('registeredMobile').focus();return;}
+ calculate();const p=window.currentCustomPlan;
+ const note='Custom package '+p.speed+'Mbps '+p.validity+' paid months'+(p.extraMonths?' + '+p.extraMonths+' free months':'')+' - '+mobile+' - total '+p.total;
+ if(typeof showPaymentOptions!=='function'){alert('Payment service is unavailable. Please contact Bajrang on 9893705006.');return;}
+ if(confirm('Proceed to pay '+money(p.total)+'?\\nRegistered mobile: '+mobile+'\\nBroadband: '+p.speed+' Mbps / '+p.validity+' months\\nOTT: '+(p.ottRate===0?'None':(p.ottRate===199?'Plan 1':'Plan 2')+' / '+p.ottMonths+' months')+'\\nIPTV: '+(p.iptvRate===0?'None':(p.iptvRate===199?'1 device':'2 devices')+' / '+p.iptvMonths+' months')+'\\n\\nActivation follows payment verification.')){
+   showPaymentOptions(p.total,note);
+ }
+};
+document.querySelectorAll('input[name="speed"],input[name="validity"],input[name="ott"],input[name="iptv"]').forEach(x=>x.addEventListener('change',calculate));
+$('ottMonths').addEventListener('change',calculate);$('iptvMonths').addEventListener('change',calculate);calculate();
+})();
+</script>
+</body></html>
